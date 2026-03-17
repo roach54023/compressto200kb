@@ -1,4 +1,15 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-  <rect width="32" height="32" rx="7" fill="#2563eb"/>
-  <text x="16" y="23" font-size="20" text-anchor="middle" fill="white" font-family="Arial">⚡</text>
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2563eb"/>
+      <stop offset="100%" style="stop-color:#1d4ed8"/>
+    </linearGradient>
+  </defs>
+  <rect width="32" height="32" rx="7" fill="url(#bg)"/>
+  <!-- Compress arrow icon -->
+  <text x="16" y="14" font-size="8" text-anchor="middle" fill="rgba(255,255,255,0.85)" font-family="Arial,sans-serif" font-weight="bold">200</text>
+  <text x="16" y="24" font-size="7" text-anchor="middle" fill="rgba(255,255,255,0.7)" font-family="Arial,sans-serif">KB</text>
+  <!-- Top arrow down -->
+  <line x1="16" y1="3" x2="16" y2="7" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+  <polyline points="13.5,5.5 16,8 18.5,5.5" fill="none" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>
