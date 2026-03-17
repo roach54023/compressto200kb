@@ -6,6 +6,7 @@
   <meta name="theme-color" content="#2563eb" />
   <title>Compress JPEG to 200KB Online Free – Instant, No Upload</title>
   <meta name="description" content="Compress JPEG to 200KB online for free. Reduce JPG photos to exactly 200KB instantly in your browser. No server upload, no registration, 100% private." />
+  <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://compressto200kb.com/compress-jpeg-to-200kb/" />
   <link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48" />
   <link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png" />
@@ -47,8 +48,10 @@
     "@type": "FAQPage",
     "mainEntity": [
       {"@type": "Question", "name": "How do I compress a JPEG to exactly 200KB?", "acceptedAnswer": {"@type": "Answer", "text": "Upload your JPEG file to this tool with the 200 KB preset selected. The tool automatically finds the highest quality that produces a file at or below 200KB using a binary search algorithm."}},
-      {"@type": "Question", "name": "Will compressing a JPEG to 200KB reduce quality?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, some quality reduction is inevitable. However, our algorithm finds the highest possible quality that still meets your 200KB target, minimizing quality loss."}},
-      {"@type": "Question", "name": "Is my JPEG uploaded to a server?", "acceptedAnswer": {"@type": "Answer", "text": "No. All processing happens entirely inside your web browser. Your JPEG files are never sent to any server."}}
+      {"@type": "Question", "name": "Will compressing a JPEG to 200KB reduce quality?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, some quality reduction is inevitable. However, our algorithm finds the highest possible quality that still meets your 200KB target, minimizing quality loss. For most use cases like form uploads and profile pictures, the result is visually excellent."}},
+      {"@type": "Question", "name": "Is my JPEG uploaded to a server?", "acceptedAnswer": {"@type": "Answer", "text": "No. All processing happens entirely inside your web browser. Your JPEG files are never sent to any server."}},
+      {"@type": "Question", "name": "Does JPEG compression remove EXIF metadata?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. When our tool re-encodes your JPEG using the browser Canvas API, EXIF metadata (GPS location, camera model, shooting date) is stripped from the output. This is a privacy benefit — your compressed file won't contain personal location data."}},
+      {"@type": "Question", "name": "What JPEG quality level does the tool use?", "acceptedAnswer": {"@type": "Answer", "text": "The tool uses a binary search algorithm to find the highest quality that produces a file at or below your target size. For a 200KB target, most photos end up at quality 65–85 depending on image complexity and dimensions."}}
     ]
   }
   </script>
@@ -234,14 +237,23 @@
   </div>
 
   <div class="section">
-    <h2>About This Tool</h2>
-    <p>JPEG (also written JPG) is the most common image format for photographs. When you need to compress a JPEG to 200KB, our tool uses a binary search algorithm to find the highest possible JPEG quality that still produces a file at or below 200KB.</p>
-    <h3>Why Compress JPEG to 200KB?</h3>
-    <p>Many platforms impose a 200KB limit on JPEG uploads, including university admission portals, bank account opening forms, government ID verification systems, and job application platforms. A 200KB JPEG at typical dimensions (600×800 px) retains excellent visual quality for identity verification and profile pictures.</p>
-    <h3>JPEG vs PNG for Compression</h3>
-    <p>JPEG uses lossy compression, which means some image data is discarded to reduce file size. This makes JPEG ideal for photographs where a small quality reduction is acceptable. For logos, screenshots, or images with text, PNG may be more appropriate — though our tool can also compress PNG files to 200KB by converting them to JPEG.</p>
+    <h2>About JPEG Compression to 200KB</h2>
+    <p>JPEG (Joint Photographic Experts Group) is the world's most widely used image format for photographs. It achieves small file sizes through <strong>lossy compression</strong> — a process that permanently removes some image data that the human eye is least likely to notice. When you compress a JPEG to 200KB, our tool uses a binary search algorithm to find the highest possible quality level that still produces a file at or below your target.</p>
+
+    <h3>How JPEG Quality Levels Work</h3>
+    <p>JPEG quality is typically expressed as a value from 1 to 100 (or 0.01 to 0.99 in the browser Canvas API). At quality 95, a photo looks nearly identical to the original but may be 3–5× larger than at quality 70. Our binary search starts at quality 0.5, checks the resulting file size, then moves up or down by half the remaining range — converging on the optimal quality in just 10–15 iterations. This guarantees you get the <em>highest possible quality</em> that fits within 200KB.</p>
+
+    <h3>JPEG vs PNG: Which Should You Use?</h3>
+    <p>JPEG is ideal for photographs, portraits, and images with gradients — it achieves 5–10× smaller files than PNG for the same visual quality. PNG is better for screenshots, logos, diagrams, and images with sharp edges or text, because PNG uses lossless compression that preserves every pixel exactly. If you upload a PNG to this tool, it will be converted to JPEG for compression — which is usually fine for photos but may introduce artifacts on text or line art.</p>
+
+    <h3>JPEG EXIF Data and Metadata</h3>
+    <p>When our tool re-encodes your JPEG using the Canvas API, EXIF metadata (camera model, GPS location, shooting date) is stripped from the output. This is actually a privacy benefit — your compressed file won't contain location data or device information. If you need to preserve EXIF data, consider using a desktop tool like Lightroom or ImageMagick instead.</p>
+
+    <h3>Common 200KB JPEG Use Cases</h3>
+    <p>The 200KB limit is enforced by Indian government exam portals (UPSC, SSC, IBPS), university admission systems, bank KYC forms, job application platforms, and many social media profile picture uploaders. A well-compressed 200KB JPEG at 600×800 pixels typically achieves quality 70–80, which is visually excellent for identity documents and profile photos.</p>
+
     <h3>Privacy &amp; Security</h3>
-    <p>All compression happens inside your browser using the HTML5 Canvas API. Your JPEG files are never sent to any server, never stored, and never seen by anyone other than you.</p>
+    <p>All compression happens inside your browser using the HTML5 Canvas API. Your JPEG files are never sent to any server, never stored, and never seen by anyone other than you. This is especially important for sensitive documents like passport photos, ID scans, and bank documents.</p>
   </div>
 
   <div class="section">
@@ -251,6 +263,9 @@
       <div class="faq-item"><div class="faq-q">Will compressing a JPEG to 200KB reduce quality?</div><div class="faq-a">Yes, some quality reduction is inevitable when compressing to a specific file size. However, our algorithm finds the highest possible quality that still meets your 200KB target, minimizing quality loss. For most use cases like form uploads and profile pictures, the result is visually excellent.</div></div>
       <div class="faq-item"><div class="faq-q">Is my JPEG uploaded to a server?</div><div class="faq-a">No. All processing happens entirely inside your web browser using the HTML5 Canvas API. Your JPEG files are never sent to any server, never stored anywhere, and never seen by anyone other than you.</div></div>
       <div class="faq-item"><div class="faq-q">What is the output format?</div><div class="faq-a">The output is always a JPEG (.jpg) file. If you upload a PNG or WEBP, it will be converted to JPEG for compression. JPEG provides the best compression ratio for photographs.</div></div>
+      <div class="faq-item"><div class="faq-q">Does JPEG compression remove EXIF metadata?</div><div class="faq-a">Yes. When our tool re-encodes your JPEG using the browser Canvas API, EXIF metadata (GPS location, camera model, shooting date) is stripped from the output. This is a privacy benefit — your compressed file won't contain personal location data.</div></div>
+      <div class="faq-item"><div class="faq-q">What JPEG quality level does the tool use?</div><div class="faq-a">The tool doesn't use a fixed quality level. Instead, it uses a binary search algorithm to find the highest quality that produces a file at or below your target size. For a 200KB target, most photos end up at quality 65–85 depending on image complexity and dimensions.</div></div>
+      <div class="faq-item"><div class="faq-q">Can I compress a JPEG to exactly 200KB (not under)?</div><div class="faq-a">The tool targets at or below 200KB. Due to how JPEG encoding works, hitting exactly 200.0KB is not reliably achievable. The output will be as close to 200KB as possible while staying under the limit — typically within 1–5KB of the target.</div></div>
     </div>
   </div>
 
@@ -326,7 +341,7 @@ function handleFiles(files) {
 function addResultItem(id, name, originalSize) {
   const div = document.createElement('div');
   div.className = 'result-item'; div.id = id;
-  div.innerHTML = `<img class="result-thumb" src="" alt="${escHtml(name)}" /><div class="result-info"><div class="result-name">${escHtml(name)}</div><div class="result-sizes">${formatSize(originalSize)}<span class="arrow">→</span><span class="new-size" id="${id}-newsize">Compressing…</span></div><div class="progress-bar-wrap"><div class="progress-bar" id="${id}-bar" style="width:30%"></div></div></div><a class="btn-dl" id="${id}-dl" disabled>⬇ Download</a>`;
+  div.innerHTML = `<img class="result-thumb" src="" alt="${escHtml(name)}" width="64" height="64" /><div class="result-info"><div class="result-name">${escHtml(name)}</div><div class="result-sizes">${formatSize(originalSize)}<span class="arrow">→</span><span class="new-size" id="${id}-newsize">Compressing…</span></div><div class="progress-bar-wrap"><div class="progress-bar" id="${id}-bar" style="width:30%"></div></div></div><a class="btn-dl" id="${id}-dl" disabled>⬇ Download</a>`;
   document.getElementById('results').appendChild(div);
 }
 

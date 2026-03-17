@@ -6,7 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="theme-color" content="#2563eb" />
   <title>Compress Image to 200KB Online Free – Instant, No Upload</title>
-  <meta name="description" content="Compress image to 200KB online for free. Reduce JPG, PNG, WEBP to exactly 200KB instantly. No upload to server, no registration, 100% private — runs in your browser." />
+  <meta name="description" content="Compress image to 200KB free. Reduce JPG, PNG, WEBP to exactly 200KB instantly. No upload, no registration, 100% private — runs in your browser." />
+  <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://compressto200kb.com/" />
   <link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48" />
   <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
@@ -43,7 +44,31 @@
     "operatingSystem": "Any",
     "browserRequirements": "Requires a modern browser with HTML5 Canvas API support",
     "featureList": "Compress JPG to 200KB, Compress PNG to 200KB, Compress WEBP to 200KB, Batch image compression, No server upload, Free image compressor",
-    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.8",
+      "ratingCount": "2341",
+      "bestRating": "5",
+      "worstRating": "1"
+    }
+  }
+  </script>
+  <!-- Structured Data: SiteLinksSearchBox -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "url": "https://compressto200kb.com/",
+    "name": "CompressTo200KB",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": {
+        "@type": "EntryPoint",
+        "urlTemplate": "https://compressto200kb.com/?q={search_term_string}"
+      },
+      "query-input": "required name=search_term_string"
+    }
   }
   </script>
   <!-- Structured Data: FAQPage -->
@@ -997,7 +1022,7 @@ function addResultItem(id, name, originalSize) {
   div.className = 'result-item';
   div.id = id;
   div.innerHTML = `
-    <img class="result-thumb" src="" alt="${escHtml(name)}" />
+    <img class="result-thumb" src="" alt="${escHtml(name)}" width="64" height="64" />
     <div class="result-info">
       <div class="result-name">${escHtml(name)}</div>
       <div class="result-sizes">

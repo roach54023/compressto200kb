@@ -6,6 +6,7 @@
   <meta name="theme-color" content="#2563eb" />
   <title>Compress PNG to 200KB Online Free – Instant, No Upload</title>
   <meta name="description" content="Compress PNG to 200KB online for free. Reduce PNG images to exactly 200KB instantly in your browser. No server upload, no registration, 100% private." />
+  <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://compressto200kb.com/compress-png-to-200kb/" />
   <link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48" />
   <link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png" />
@@ -46,9 +47,11 @@
     "@context": "https://schema.org",
     "@type": "FAQPage",
     "mainEntity": [
-      {"@type": "Question", "name": "Can I compress a PNG to 200KB without losing quality?", "acceptedAnswer": {"@type": "Answer", "text": "PNG to 200KB compression requires converting to JPEG, which involves some quality loss. Our algorithm minimizes this by finding the highest JPEG quality that still meets your 200KB target."}},
-      {"@type": "Question", "name": "What happens to PNG transparency?", "acceptedAnswer": {"@type": "Answer", "text": "Transparent areas in your PNG will be filled with white in the output JPEG file. JPEG does not support transparency."}},
-      {"@type": "Question", "name": "Is my PNG uploaded to a server?", "acceptedAnswer": {"@type": "Answer", "text": "No. All processing happens entirely inside your web browser. Your PNG files are never sent to any server."}}
+      {"@type": "Question", "name": "Can I compress a PNG to 200KB without losing quality?", "acceptedAnswer": {"@type": "Answer", "text": "PNG to 200KB compression requires converting to JPEG, which involves some quality loss. Our algorithm minimizes this by finding the highest JPEG quality that still meets your 200KB target. For most use cases, the result is visually excellent."}},
+      {"@type": "Question", "name": "What happens to PNG transparency?", "acceptedAnswer": {"@type": "Answer", "text": "Transparent areas in your PNG will be filled with white in the output JPEG file. JPEG does not support transparency. This is correct for government forms and profile photos, which expect a solid white background."}},
+      {"@type": "Question", "name": "Is my PNG uploaded to a server?", "acceptedAnswer": {"@type": "Answer", "text": "No. All processing happens entirely inside your web browser. Your PNG files are never sent to any server."}},
+      {"@type": "Question", "name": "Why is my PNG file so much larger than 200KB?", "acceptedAnswer": {"@type": "Answer", "text": "PNG uses lossless compression, which preserves every pixel exactly. A typical 1200×800 PNG photo can be 800KB–2MB. JPEG achieves much smaller sizes by discarding subtle color variations the eye barely notices."}},
+      {"@type": "Question", "name": "Can I compress a PNG screenshot to 200KB?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Screenshots are often saved as PNG and can be large. Our tool converts the screenshot PNG to JPEG at the optimal quality for 200KB. Text and sharp edges may show slight JPEG artifacts, which is usually acceptable for form uploads."}}
     ]
   }
   </script>
@@ -234,14 +237,23 @@
   </div>
 
   <div class="section">
-    <h2>About This Tool</h2>
-    <p>PNG is a lossless image format commonly used for screenshots, graphics, logos, and images with transparency. When you need to compress a PNG to 200KB, our tool converts it to JPEG format using a binary search algorithm to find the optimal quality level.</p>
-    <h3>PNG to JPEG Conversion</h3>
-    <p>Because PNG uses lossless compression, PNG files are often much larger than equivalent JPEG files. To achieve a 200KB target, our tool converts your PNG to JPEG format. This conversion is lossy — some image data is discarded — but the result is typically visually excellent for photographs and general-purpose images.</p>
-    <h3>Transparency Note</h3>
-    <p>If your PNG has a transparent background, the transparent areas will be filled with white in the output JPEG. If you need to preserve transparency, consider keeping the original PNG format and using a different compression approach.</p>
-    <h3>When to Compress PNG to 200KB</h3>
-    <p>Common use cases include: uploading screenshots to government portals, submitting PNG photos to job application systems, sharing PNG images via email with size limits, and optimizing PNG images for web pages.</p>
+    <h2>About PNG Compression to 200KB</h2>
+    <p>PNG (Portable Network Graphics) uses <strong>lossless compression</strong> — every pixel is preserved exactly as in the original. This makes PNG files significantly larger than JPEG for photographs, but perfect for screenshots, logos, diagrams, and images with text. When you need to compress a PNG to 200KB, our tool converts it to JPEG using a binary search algorithm to find the optimal quality level.</p>
+
+    <h3>Why PNG Files Are Larger Than JPEG</h3>
+    <p>A typical 1200×800 photograph saved as PNG might be 800KB–2MB, while the same image as JPEG at quality 80 might be only 150–300KB. This is because PNG's lossless algorithm must store every pixel value precisely, while JPEG discards subtle color variations that the human eye barely notices. For photos, JPEG almost always produces a better size-to-quality ratio.</p>
+
+    <h3>PNG Transparency: What Happens During Compression</h3>
+    <p>PNG supports full alpha-channel transparency (RGBA), which JPEG does not. When our tool converts your PNG to JPEG, transparent pixels are filled with a <strong>white background</strong>. This is the correct behavior for most use cases — government forms, profile pictures, and document uploads all expect a solid background. If you need to preserve transparency for web graphics or logos, keep the original PNG and use a different tool.</p>
+
+    <h3>PNG vs JPEG: When to Use Each</h3>
+    <p>Use PNG when you need pixel-perfect accuracy: screenshots with text, UI mockups, logos, icons, and diagrams. Use JPEG (or compress your PNG to JPEG via this tool) when you need a small file size for photos, portraits, and images with smooth color gradients. The key difference: PNG is lossless but large; JPEG is lossy but compact.</p>
+
+    <h3>PNG Color Depth and Compression</h3>
+    <p>PNG supports 8-bit (256 colors), 24-bit (16.7 million colors), and 32-bit (with alpha) color depths. Our tool handles all PNG variants. 32-bit RGBA PNGs are the most common type with transparency — these are converted to 24-bit JPEG with white background fill. 8-bit indexed PNGs (common for simple graphics) are also supported and converted correctly.</p>
+
+    <h3>Common Use Cases for PNG to 200KB</h3>
+    <p>Screenshots from mobile apps often save as PNG and may exceed 200KB. Government portals that accept PNG uploads typically enforce the same 200KB limit as JPEG. University admission forms, bank KYC systems, and job application platforms may require PNG photos under 200KB. Our tool handles all these cases instantly in your browser.</p>
   </div>
 
   <div class="section">
@@ -251,6 +263,9 @@
       <div class="faq-item"><div class="faq-q">What happens to PNG transparency?</div><div class="faq-a">Transparent areas in your PNG will be filled with white in the output JPEG file. JPEG does not support transparency. If you need to preserve transparency, keep the original PNG format.</div></div>
       <div class="faq-item"><div class="faq-q">Is my PNG uploaded to a server?</div><div class="faq-a">No. All processing happens entirely inside your web browser using the HTML5 Canvas API. Your PNG files are never sent to any server.</div></div>
       <div class="faq-item"><div class="faq-q">What is the output format when compressing PNG?</div><div class="faq-a">The output is a JPEG (.jpg) file. PNG is converted to JPEG because JPEG provides much better compression ratios for photographs and general images.</div></div>
+      <div class="faq-item"><div class="faq-q">Why is my PNG file so much larger than 200KB?</div><div class="faq-a">PNG uses lossless compression, which preserves every pixel exactly. A typical 1200×800 PNG photo can be 800KB–2MB. JPEG achieves much smaller sizes by discarding subtle color variations the eye barely notices. Our tool converts your PNG to JPEG to achieve the 200KB target.</div></div>
+      <div class="faq-item"><div class="faq-q">Can I compress a PNG screenshot to 200KB?</div><div class="faq-a">Yes. Screenshots are often saved as PNG and can be large. Our tool converts the screenshot PNG to JPEG at the optimal quality for 200KB. Note that text and sharp edges may show slight JPEG artifacts — this is normal and usually acceptable for form uploads.</div></div>
+      <div class="faq-item"><div class="faq-q">Will the white background look correct on government forms?</div><div class="faq-a">Yes. Government portals and application forms expect photos with a solid white or light background. When your PNG's transparent areas are filled with white, the result looks exactly like a standard passport-style photo on a white background — which is what most forms require.</div></div>
     </div>
   </div>
 
@@ -326,7 +341,7 @@ function handleFiles(files) {
 function addResultItem(id, name, originalSize) {
   const div = document.createElement('div');
   div.className = 'result-item'; div.id = id;
-  div.innerHTML = `<img class="result-thumb" src="" alt="${escHtml(name)}" /><div class="result-info"><div class="result-name">${escHtml(name)}</div><div class="result-sizes">${formatSize(originalSize)}<span class="arrow">→</span><span class="new-size" id="${id}-newsize">Compressing…</span></div><div class="progress-bar-wrap"><div class="progress-bar" id="${id}-bar" style="width:30%"></div></div></div><a class="btn-dl" id="${id}-dl" disabled>⬇ Download</a>`;
+  div.innerHTML = `<img class="result-thumb" src="" alt="${escHtml(name)}" width="64" height="64" /><div class="result-info"><div class="result-name">${escHtml(name)}</div><div class="result-sizes">${formatSize(originalSize)}<span class="arrow">→</span><span class="new-size" id="${id}-newsize">Compressing…</span></div><div class="progress-bar-wrap"><div class="progress-bar" id="${id}-bar" style="width:30%"></div></div></div><a class="btn-dl" id="${id}-dl" disabled>⬇ Download</a>`;
   document.getElementById('results').appendChild(div);
 }
 
