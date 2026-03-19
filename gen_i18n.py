@@ -12,11 +12,17 @@ import os, re, shutil, sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from i18n_zh import ZH
 from i18n_hi import HI
+from i18n_pt import PT
+from i18n_es import ES
+from i18n_ar import AR
+from i18n_bn import BN
+from i18n_id import ID
+from i18n_fr import FR
 
 BASE   = os.path.dirname(os.path.abspath(__file__))
 DOMAIN = "https://compressto200kb.com"
 
-LANGS = {"zh": ZH, "hi": HI}
+LANGS = {"zh": ZH, "hi": HI, "pt": PT, "es": ES, "ar": AR, "bn": BN, "id": ID, "fr": FR}
 
 # (slug, en_html_path, default_kb, page_key)
 PAGES = [
