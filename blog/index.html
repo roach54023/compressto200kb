@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-LPXTP48T31"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-LPXTP48T31');
+  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#2563eb" />
+  <title>Blog – Image Compression Guides &amp; Tips | CompressTo200KB</title>
+  <meta name="description" content="Step-by-step guides on compressing images for UPSC, SSC, IBPS, passport photos, WhatsApp, and more. Free tips, no software needed." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://compressto200kb.com/blog/" />
+  <link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Blog – Image Compression Guides &amp; Tips" />
+  <meta property="og:description" content="Step-by-step guides on compressing images for UPSC, SSC, IBPS, passport photos, WhatsApp, and more." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://compressto200kb.com/blog/" />
+  <meta property="og:image" content="https://compressto200kb.com/og-image.png" />
+  <meta property="og:site_name" content="CompressTo200KB" />
+
+  <!-- Structured Data: BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://compressto200kb.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://compressto200kb.com/blog/" }
+    ]
+  }
+  </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --primary: #2563eb;
+      --primary-dark: #1d4ed8;
+      --primary-light: #eff6ff;
+      --gray-50: #f9fafb;
+      --gray-100: #f3f4f6;
+      --gray-200: #e5e7eb;
+      --gray-400: #9ca3af;
+      --gray-500: #6b7280;
+      --gray-600: #4b5563;
+      --gray-700: #374151;
+      --gray-900: #111827;
+      --radius: 12px;
+      --shadow: 0 4px 24px rgba(0,0,0,.08);
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: var(--gray-50);
+      color: var(--gray-900);
+      line-height: 1.6;
+    }
+
+    /* ── Header ── */
+    header {
+      background: #fff;
+      border-bottom: 1px solid var(--gray-200);
+      padding: 14px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .logo-wrap { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+    .logo-icon {
+      width: 36px; height: 36px;
+      background: var(--primary);
+      border-radius: 8px;
+      display: flex; align-items: center; justify-content: center;
+      color: #fff; font-size: 18px;
+    }
+    .logo-text { font-size: 18px; font-weight: 700; color: var(--gray-900); }
+    .logo-text span { color: var(--primary); }
+    nav { display: flex; gap: 20px; }
+    nav a { font-size: 13px; color: var(--gray-600); text-decoration: none; font-weight: 500; }
+    nav a:hover { color: var(--primary); }
+    nav a.active { color: var(--primary); }
+
+    /* ── Breadcrumb ── */
+    .breadcrumb {
+      max-width: 900px;
+      margin: 20px auto 0;
+      padding: 0 24px;
+      font-size: 13px;
+      color: var(--gray-400);
+    }
+    .breadcrumb a { color: var(--gray-600); text-decoration: none; }
+    .breadcrumb a:hover { color: var(--primary); }
+    .breadcrumb span { margin: 0 6px; }
+
+    /* ── Page header ── */
+    .page-header {
+      max-width: 900px;
+      margin: 32px auto 0;
+      padding: 0 24px;
+    }
+    .page-header h1 {
+      font-size: clamp(26px, 4vw, 36px);
+      font-weight: 800;
+      color: var(--gray-900);
+      margin-bottom: 10px;
+    }
+    .page-header p {
+      font-size: 16px;
+      color: var(--gray-600);
+      max-width: 600px;
+    }
+
+    /* ── Blog grid ── */
+    .blog-grid {
+      max-width: 900px;
+      margin: 36px auto 80px;
+      padding: 0 24px;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 24px;
+    }
+
+    .blog-card {
+      background: #fff;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      text-decoration: none;
+      color: inherit;
+      display: flex;
+      flex-direction: column;
+      transition: transform .15s, box-shadow .15s;
+    }
+    .blog-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 32px rgba(0,0,0,.12);
+    }
+
+    .blog-card-thumb {
+      background: var(--primary-light);
+      height: 140px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 56px;
+    }
+
+    .blog-card-body {
+      padding: 20px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .blog-card-tag {
+      display: inline-block;
+      background: var(--primary-light);
+      color: var(--primary);
+      border-radius: 999px;
+      padding: 3px 12px;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+      align-self: flex-start;
+    }
+
+    .blog-card h2 {
+      font-size: 17px;
+      font-weight: 700;
+      line-height: 1.35;
+      color: var(--gray-900);
+      margin-bottom: 10px;
+    }
+
+    .blog-card p {
+      font-size: 14px;
+      color: var(--gray-600);
+      line-height: 1.6;
+      flex: 1;
+      margin-bottom: 16px;
+    }
+
+    .blog-card-meta {
+      font-size: 12px;
+      color: var(--gray-400);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .read-more {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--primary);
+    }
+
+    /* ── Footer ── */
+    footer {
+      background: var(--gray-900);
+      color: var(--gray-400);
+      text-align: center;
+      padding: 32px 24px;
+      font-size: 13px;
+    }
+    footer a { color: var(--gray-400); text-decoration: none; }
+    footer a:hover { color: #fff; }
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 16px;
+      margin-bottom: 12px;
+    }
+
+    @media (max-width: 480px) {
+      .blog-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <a href="/" class="logo-wrap">
+    <div class="logo-icon">⚡</div>
+    <div class="logo-text">Compress<span>To200KB</span></div>
+  </a>
+  <nav>
+    <a href="/compress-image-to-100kb/">100 KB</a>
+    <a href="/compress-image-to-50kb/">50 KB</a>
+    <a href="/compress-image-to-20kb/">20 KB</a>
+    <a href="/compress-image-to-500kb/">500 KB</a>
+    <a href="/compress-image-to-1mb/">1 MB</a>
+    <a href="/blog/" class="active">Blog</a>
+  </nav>
+</header>
+
+<div class="breadcrumb">
+  <a href="/">Home</a><span>›</span> Blog
+</div>
+
+<div class="page-header">
+  <h1>Image Compression Guides</h1>
+  <p>Step-by-step tutorials for compressing photos for government exams, passport applications, WhatsApp, and more — all free, no software needed.</p>
+</div>
+
+<div class="blog-grid">
+
+  <a class="blog-card" href="/blog/compress-image-for-upsc-ssc-ibps/">
+    <div class="blog-card-thumb">🏛️</div>
+    <div class="blog-card-body">
+      <span class="blog-card-tag">Guide</span>
+      <h2>How to Compress Image for UPSC, SSC &amp; IBPS Online Forms (2024–25)</h2>
+      <p>Exact photo and signature KB requirements for UPSC Civil Services, SSC CGL/CHSL, IBPS PO/Clerk, SBI, and RRB — with a step-by-step compression walkthrough.</p>
+      <div class="blog-card-meta">
+        <span>January 2025</span>
+        <span>·</span>
+        <span>5 min read</span>
+        <span style="flex:1"></span>
+        <span class="read-more">Read →</span>
+      </div>
+    </div>
+  </a>
+
+</div>
+
+<footer>
+  <div class="footer-links">
+    <a href="/">Compress to 200KB</a>
+    <a href="/compress-image-to-50kb/">Compress to 50KB</a>
+    <a href="/compress-image-to-100kb/">Compress to 100KB</a>
+    <a href="/compress-photo-for-government-form/">Gov Form Photo</a>
+    <a href="/blog/">Blog</a>
+    <a href="/privacy/">Privacy Policy</a>
+  </div>
+  <p>© 2025–2026 CompressTo200KB.com · Free online image compressor · No upload required</p>
+</footer>
+
+</body>
+</html>
