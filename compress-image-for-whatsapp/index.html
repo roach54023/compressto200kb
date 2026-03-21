@@ -263,6 +263,28 @@
   </div>
 
   <div class="section">
+    <h2>How WhatsApp Compresses Your Photos (And How to Beat It)</h2>
+    <p>WhatsApp uses a fixed-quality JPEG compression algorithm that targets roughly 100–200KB regardless of your original image's content. This works fine for simple scenes but causes visible quality loss on photos with fine detail — hair, fabric texture, distant foliage, or text in images.</p>
+    <h3>WhatsApp's Compression vs. This Tool</h3>
+    <p>WhatsApp applies a single compression pass at a fixed quality setting. This tool uses a <strong>binary search algorithm</strong> that runs up to 16 iterations to find the highest possible JPEG quality that still fits within your target size. The result is a file that looks noticeably sharper than what WhatsApp would produce from the same original — because you're giving WhatsApp an already-optimized file, and it has nothing left to compress.</p>
+    <h3>Messaging App Compression Comparison</h3>
+    <table class="size-table" style="width:100%;border-collapse:collapse;margin-top:12px;">
+      <thead><tr><th style="text-align:left;padding:8px 12px;background:#f3f4f6;border:1px solid #e5e7eb;">App</th><th style="text-align:left;padding:8px 12px;background:#f3f4f6;border:1px solid #e5e7eb;">Auto-Compress?</th><th style="text-align:left;padding:8px 12px;background:#f3f4f6;border:1px solid #e5e7eb;">Typical Output Size</th><th style="text-align:left;padding:8px 12px;background:#f3f4f6;border:1px solid #e5e7eb;">Recommended Pre-Compress Target</th></tr></thead>
+      <tbody>
+        <tr><td style="padding:8px 12px;border:1px solid #e5e7eb;"><strong>WhatsApp</strong></td><td style="padding:8px 12px;border:1px solid #e5e7eb;">Yes (always)</td><td style="padding:8px 12px;border:1px solid #e5e7eb;">100–200 KB</td><td style="padding:8px 12px;border:1px solid #e5e7eb;">200 KB</td></tr>
+        <tr><td style="padding:8px 12px;border:1px solid #e5e7eb;"><strong>Telegram</strong></td><td style="padding:8px 12px;border:1px solid #e5e7eb;">Only as "photo" (not "file")</td><td style="padding:8px 12px;border:1px solid #e5e7eb;">200–500 KB</td><td style="padding:8px 12px;border:1px solid #e5e7eb;">200–500 KB</td></tr>
+        <tr><td style="padding:8px 12px;border:1px solid #e5e7eb;"><strong>Signal</strong></td><td style="padding:8px 12px;border:1px solid #e5e7eb;">Yes (moderate)</td><td style="padding:8px 12px;border:1px solid #e5e7eb;">200–400 KB</td><td style="padding:8px 12px;border:1px solid #e5e7eb;">200 KB</td></tr>
+        <tr><td style="padding:8px 12px;border:1px solid #e5e7eb;"><strong>iMessage</strong></td><td style="padding:8px 12px;border:1px solid #e5e7eb;">Yes (on cellular)</td><td style="padding:8px 12px;border:1px solid #e5e7eb;">100–300 KB</td><td style="padding:8px 12px;border:1px solid #e5e7eb;">200 KB</td></tr>
+        <tr><td style="padding:8px 12px;border:1px solid #e5e7eb;"><strong>WeChat</strong></td><td style="padding:8px 12px;border:1px solid #e5e7eb;">Yes (aggressive)</td><td style="padding:8px 12px;border:1px solid #e5e7eb;">50–150 KB</td><td style="padding:8px 12px;border:1px solid #e5e7eb;">100–200 KB</td></tr>
+      </tbody>
+    </table>
+    <h3>WhatsApp Profile Picture: What Size Is Best?</h3>
+    <p>WhatsApp profile pictures are displayed at 640×640 px maximum and stored at around 100KB. For your profile picture, compress to 100KB at 640×640 px for the best result. A larger file won't look better — WhatsApp will compress it down anyway. Use the <a href="/compress-image-to-100kb/">100KB tool</a> for profile pictures.</p>
+    <h3>WhatsApp Status Images</h3>
+    <p>WhatsApp Status images are displayed at up to 1280×720 px. For Status photos, 200KB is the ideal target — it gives you enough quality for the larger display size while ensuring fast loading for your contacts. If you're sharing a screenshot or graphic with text, use 500KB to preserve text sharpness.</p>
+  </div>
+
+  <div class="section">
     <h2>Frequently Asked Questions</h2>
     <div class="faq">
       <div class="faq-item"><div class="faq-q">What is the best image size for WhatsApp?</div><div class="faq-a">For WhatsApp sharing, 200KB is a good target — it provides excellent visual quality while keeping file sizes small for fast delivery. For profile pictures, 100KB is sufficient. WhatsApp itself compresses images to around 100-200KB when you send them.</div></div>
