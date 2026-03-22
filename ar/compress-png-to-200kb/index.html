@@ -158,6 +158,26 @@
     footer { background: #fff; border-top: 1px solid var(--gray-200); padding: 28px 24px; text-align: center; font-size: 13px; color: var(--gray-500); }
     footer a { color: var(--gray-500); text-decoration: none; margin: 0 8px; }
     footer a:hover { color: var(--primary); }
+
+  /* RTL overrides for Arabic */
+  [dir="rtl"] body { direction: rtl; }
+  [dir="rtl"] .section h2,
+  [dir="rtl"] .section h3,
+  [dir="rtl"] .section p,
+  [dir="rtl"] .hero h1,
+  [dir="rtl"] .hero p { text-align: right; }
+  [dir="rtl"] .size-table th { text-align: right; }
+  [dir="rtl"] .size-table td { text-align: right; }
+  [dir="rtl"] .faq-q { flex-direction: row-reverse; }
+  [dir="rtl"] .faq-q::after { margin-left: 0; margin-right: 12px; }
+  [dir="rtl"] .step { flex-direction: row-reverse; }
+  [dir="rtl"] .step-body { text-align: right; }
+  [dir="rtl"] nav { flex-direction: row-reverse; }
+  [dir="rtl"] .result-item { flex-direction: row-reverse; }
+  [dir="rtl"] .result-info { text-align: right; }
+  [dir="rtl"] ol { padding-right: 20px; padding-left: 0; }
+  [dir="rtl"] .size-row { flex-direction: row-reverse; justify-content: flex-end; }
+  [dir="rtl"] .badges { flex-direction: row-reverse; }
   </style>
   <link rel="alternate" hreflang="en" href="https://compressto200kb.com/compress-png-to-200kb/" />
   <link rel="alternate" hreflang="zh-CN" href="https://compressto200kb.com/zh/compress-png-to-200kb/" />
@@ -188,7 +208,7 @@
 
 <div class="hero">
   <h1>ضغط <span>PNG إلى 200KB</span> مجاناً عبر الإنترنت</h1>
-  <p>Reduce any PNG image to exactly 200KB — instantly, in your browser. No server upload, no registration, 100% private.</p>
+  <p>قم بتقليل حجم أي صورة PNG إلى 200 كيلو بايت بالضبط - على الفور، في متصفحك. لا يوجد تحميل على الخادم، ولا تسجيل، خاص بنسبة 100%.</p>
   <div class="badges">
     <span class="badge">✓ Free Forever</span>
     <span class="badge">✓ بدون رفع للخادم</span>
@@ -214,8 +234,8 @@
   </div>
   <div class="dropzone" id="dropzone">
     <div class="dropzone-icon">🖼️</div>
-    <h3>Drop your images here</h3>
-    <p>Supports JPG, PNG, WEBP · Up to 20 images at once</p>
+    <h3>أسقط صورك هنا</h3>
+    <p>يدعم JPG، PNG، WEBP · ما يصل إلى 20 صورة في وقت واحد</p>
     <button class="btn-select" onclick="document.getElementById('fileInput').click()">
       📁 Select Images
     </button>
@@ -228,26 +248,26 @@
 <div class="content-wrap">
 
   <div class="section">
-    <h2>How to Compress a PNG to 200KB</h2>
+    <h2>كيفية ضغط PNG إلى 200 كيلو بايت</h2>
     <div class="steps">
       <div class="step">
         <div class="step-num">1</div>
         <div class="step-body">
-          <h4>Select 200 KB as your target size</h4>
-          <p>The 200 KB preset is selected by default. PNG files are converted to JPEG for maximum compression efficiency.</p>
+          <h4>حدد 200 كيلو بايت كحجم مستهدف</h4>
+          <p>يتم تحديد الإعداد المسبق البالغ 200 كيلو بايت بشكل افتراضي. يتم تحويل ملفات PNG إلى JPEG لتحقيق أقصى قدر من كفاءة الضغط.</p>
         </div>
       </div>
       <div class="step">
         <div class="step-num">2</div>
         <div class="step-body">
-          <h4>Upload your image</h4>
+          <h4>قم بتحميل صورتك</h4>
           <p>Click <strong>Select Images</strong> or drag and drop your JPG, PNG or WEBP file. Compression starts automatically — no waiting, no server upload.</p>
         </div>
       </div>
       <div class="step">
         <div class="step-num">3</div>
         <div class="step-body">
-          <h4>Download the compressed file</h4>
+          <h4>قم بتنزيل الملف المضغوط</h4>
           <p>Your compressed image appears instantly with a before/after size comparison. Click <strong>Download</strong> to save it.</p>
         </div>
       </div>
@@ -255,41 +275,41 @@
   </div>
 
   <div class="section">
-    <h2>About PNG Compression to 200KB</h2>
+    <h2>حول ضغط PNG إلى 200 كيلو بايت</h2>
     <p>PNG (Portable Network Graphics) uses <strong>lossless compression</strong> — every pixel is preserved exactly as in the original. This makes PNG files significantly larger than JPEG for photographs, but perfect for screenshots, logos, diagrams, and images with text. When you need to compress a PNG to 200KB, our tool converts it to JPEG using a binary search algorithm to find the optimal quality level.</p>
 
-    <h3>Why PNG Files Are Larger Than JPEG</h3>
-    <p>A typical 1200×800 photograph saved as PNG might be 800KB–2MB, while the same image as JPEG at quality 80 might be only 150–300KB. This is because PNG's lossless algorithm must store every pixel value precisely, while JPEG discards subtle color variations that the human eye barely notices. For photos, JPEG almost always produces a better size-to-quality ratio.</p>
+    <h3>لماذا تكون ملفات PNG أكبر من JPEG؟</h3>
+    <p>قد يكون حجم الصورة النموذجية مقاس 1200 × 800 المحفوظة بتنسيق PNG من 800 كيلو بايت إلى 2 ميجابايت، في حين أن نفس الصورة بتنسيق JPEG بجودة 80 قد يتراوح حجمها من 150 إلى 300 كيلو بايت فقط. وذلك لأن خوارزمية PNG غير المفقودة يجب أن تخزن كل قيمة بكسل بدقة، بينما يتجاهل JPEG اختلافات الألوان الدقيقة التي بالكاد تلاحظها العين البشرية. بالنسبة للصور، ينتج تنسيق JPEG دائمًا نسبة أفضل للحجم إلى الجودة.</p>
 
-    <h3>PNG Transparency: What Happens During Compression</h3>
+    <h3>شفافية PNG: ماذا يحدث أثناء الضغط</h3>
     <p>PNG supports full alpha-channel transparency (RGBA), which JPEG does not. When our tool converts your PNG to JPEG, transparent pixels are filled with a <strong>white background</strong>. This is the correct behavior for most use cases — government forms, profile pictures, and document uploads all expect a solid background. If you need to preserve transparency for web graphics or logos, keep the original PNG and use a different tool.</p>
 
-    <h3>PNG vs JPEG: When to Use Each</h3>
-    <p>Use PNG when you need pixel-perfect accuracy: screenshots with text, UI mockups, logos, icons, and diagrams. Use JPEG (or compress your PNG to JPEG via this tool) when you need a small file size for photos, portraits, and images with smooth color gradients. The key difference: PNG is lossless but large; JPEG is lossy but compact.</p>
+    <h3>PNG مقابل JPEG: متى يجب استخدام كل منهما</h3>
+    <p>استخدم PNG عندما تحتاج إلى دقة بكسل مثالية: لقطات شاشة تحتوي على نص ونماذج واجهة مستخدم وشعارات وأيقونات ورسوم بيانية. استخدم JPEG (أو قم بضغط PNG إلى JPEG عبر هذه الأداة) عندما تحتاج إلى حجم ملف صغير للصور الفوتوغرافية والصور ذات التدرجات اللونية الناعمة. الفرق الرئيسي: PNG لا تفقد البيانات ولكنها كبيرة الحجم؛ JPEG ضائع ولكنه مضغوط.</p>
 
-    <h3>PNG Color Depth and Compression</h3>
-    <p>PNG supports 8-bit (256 colors), 24-bit (16.7 million colors), and 32-bit (with alpha) color depths. Our tool handles all PNG variants. 32-bit RGBA PNGs are the most common type with transparency — these are converted to 24-bit JPEG with white background fill. 8-bit indexed PNGs (common for simple graphics) are also supported and converted correctly.</p>
+    <h3>PNG عمق اللون والضغط</h3>
+    <p>يدعم PNG عمق الألوان 8 بت (256 لونًا)، و24 بت (16.7 مليون لون)، و32 بت (مع ألفا). تتعامل أداتنا مع جميع متغيرات PNG. تعد ملفات RGBA PNG ذات 32 بت هي النوع الأكثر شيوعًا مع الشفافية - حيث يتم تحويلها إلى JPEG 24 بت مع تعبئة خلفية بيضاء. يتم أيضًا دعم ملفات PNG المفهرسة ذات 8 بت (الشائعة في الرسومات البسيطة) وتحويلها بشكل صحيح.</p>
 
-    <h3>Common Use Cases for PNG to 200KB</h3>
-    <p>Screenshots from mobile apps often save as PNG and may exceed 200KB. Government portals that accept PNG uploads typically enforce the same 200KB limit as JPEG. University admission forms, bank KYC systems, and job application platforms may require PNG photos under 200KB. Our tool handles all these cases instantly in your browser.</p>
+    <h3>حالات الاستخدام الشائعة لـ PNG إلى 200 كيلو بايت</h3>
+    <p>غالبًا ما يتم حفظ لقطات الشاشة من تطبيقات الأجهزة المحمولة بتنسيق PNG وقد يتجاوز حجمها 200 كيلو بايت. عادةً ما تفرض البوابات الحكومية التي تقبل تحميلات PNG نفس الحد الأقصى البالغ 200 كيلو بايت مثل JPEG. قد تتطلب نماذج القبول بالجامعة وأنظمة KYC البنكية ومنصات التقدم للوظيفة صور PNG أقل من 200 كيلو بايت. تتعامل أداتنا مع كل هذه الحالات على الفور في متصفحك.</p>
   </div>
 
   <div class="section">
-    <h2>Frequently Asked Questions</h2>
+    <h2>الأسئلة المتداولة</h2>
     <div class="faq">
-      <div class="faq-item"><div class="faq-q">Can I compress a PNG to 200KB without losing quality?</div><div class="faq-a">PNG to 200KB compression requires converting to JPEG, which involves some quality loss. Our algorithm minimizes this by finding the highest JPEG quality that still meets your 200KB target. For most use cases, the result is visually excellent.</div></div>
-      <div class="faq-item"><div class="faq-q">What happens to PNG transparency?</div><div class="faq-a">Transparent areas in your PNG will be filled with white in the output JPEG file. JPEG does not support transparency. If you need to preserve transparency, keep the original PNG format.</div></div>
-      <div class="faq-item"><div class="faq-q">Is my PNG uploaded to a server?</div><div class="faq-a">No. All processing happens entirely inside your web browser using the HTML5 Canvas API. Your PNG files are never sent to any server.</div></div>
-      <div class="faq-item"><div class="faq-q">What is the output format when compressing PNG?</div><div class="faq-a">The output is a JPEG (.jpg) file. PNG is converted to JPEG because JPEG provides much better compression ratios for photographs and general images.</div></div>
-      <div class="faq-item"><div class="faq-q">Why is my PNG file so much larger than 200KB?</div><div class="faq-a">PNG uses lossless compression, which preserves every pixel exactly. A typical 1200×800 PNG photo can be 800KB–2MB. JPEG achieves much smaller sizes by discarding subtle color variations the eye barely notices. Our tool converts your PNG to JPEG to achieve the 200KB target.</div></div>
-      <div class="faq-item"><div class="faq-q">Can I compress a PNG screenshot to 200KB?</div><div class="faq-a">Yes. Screenshots are often saved as PNG and can be large. Our tool converts the screenshot PNG to JPEG at the optimal quality for 200KB. Note that text and sharp edges may show slight JPEG artifacts — this is normal and usually acceptable for form uploads.</div></div>
-      <div class="faq-item"><div class="faq-q">Will the white background look correct on government forms?</div><div class="faq-a">Yes. Government portals and application forms expect photos with a solid white or light background. When your PNG's transparent areas are filled with white, the result looks exactly like a standard passport-style photo on a white background — which is what most forms require.</div></div>
+      <div class="faq-item"><div class="faq-q">هل يمكنني ضغط ملف PNG إلى 200 كيلو بايت دون فقدان الجودة؟</div><div class="faq-a">يتطلب ضغط PNG إلى 200 كيلو بايت التحويل إلى JPEG، الأمر الذي ينطوي على فقدان بعض الجودة. تعمل الخوارزمية الخاصة بنا على تقليل ذلك من خلال العثور على أعلى جودة لـ JPEG والتي لا تزال تلبي هدفك وهو 200 كيلو بايت. بالنسبة لمعظم حالات الاستخدام، تكون النتيجة ممتازة بصريًا.</div></div>
+      <div class="faq-item"><div class="faq-q">ماذا يحدث لشفافية PNG؟</div><div class="faq-a">سيتم ملء المناطق الشفافة في ملف PNG باللون الأبيض في ملف JPEG الناتج. JPEG لا يدعم الشفافية. إذا كنت بحاجة إلى الحفاظ على الشفافية، فاحتفظ بتنسيق PNG الأصلي.</div></div>
+      <div class="faq-item"><div class="faq-q">هل تم تحميل ملف PNG الخاص بي إلى خادم؟</div><div class="faq-a">لا، تتم جميع عمليات المعالجة بالكامل داخل متصفح الويب الخاص بك باستخدام HTML5 Canvas API. لا يتم إرسال ملفات PNG الخاصة بك إلى أي خادم أبدًا.</div></div>
+      <div class="faq-item"><div class="faq-q">ما هو تنسيق الإخراج عند ضغط PNG؟</div><div class="faq-a">الإخراج هو ملف JPEG (.jpg). يتم تحويل PNG إلى JPEG لأن JPEG يوفر نسب ضغط أفضل بكثير للصور الفوتوغرافية والصور العامة.</div></div>
+      <div class="faq-item"><div class="faq-q">لماذا ملف PNG الخاص بي أكبر بكثير من 200 كيلو بايت؟</div><div class="faq-a">يستخدم PNG ضغطًا بدون فقدان البيانات، مما يحافظ على كل بكسل تمامًا. يمكن أن يتراوح حجم الصورة النموذجية بتنسيق PNG مقاس 1200 × 800 بين 800 كيلو بايت و2 ميجابايت. يحقق JPEG أحجامًا أصغر بكثير من خلال التخلص من اختلافات الألوان الدقيقة التي بالكاد تلاحظها العين. تقوم أداتنا بتحويل PNG إلى JPEG لتحقيق هدف 200 كيلو بايت.</div></div>
+      <div class="faq-item"><div class="faq-q">هل يمكنني ضغط لقطة شاشة PNG إلى 200 كيلو بايت؟</div><div class="faq-a">نعم. غالبًا ما يتم حفظ لقطات الشاشة بتنسيق PNG ويمكن أن تكون كبيرة. تقوم أداتنا بتحويل لقطة الشاشة PNG إلى JPEG بالجودة المثالية التي تبلغ 200 كيلو بايت. لاحظ أن النص والحواف الحادة قد تظهر آثارًا طفيفة في JPEG — وهذا أمر طبيعي ومقبول عادةً لعمليات تحميل النماذج.</div></div>
+      <div class="faq-item"><div class="faq-q">هل ستبدو الخلفية البيضاء صحيحة في النماذج الحكومية؟</div><div class="faq-a">نعم. تتوقع البوابات الحكومية ونماذج الطلبات الحصول على صور ذات خلفية بيضاء أو فاتحة. عندما تمتلئ المناطق الشفافة في ملف PNG باللون الأبيض، تبدو النتيجة تمامًا مثل صورة جواز السفر القياسية على خلفية بيضاء - وهو ما تتطلبه معظم النماذج.</div></div>
     </div>
   </div>
 
   <div class="section">
-    <h2>Other Target Sizes</h2>
-    <p>Need a different file size? Choose from our dedicated tools:</p>
+    <h2>أحجام الأهداف الأخرى</h2>
+    <p>هل تحتاج إلى حجم ملف مختلف؟ اختر من أدواتنا المخصصة:</p>
     <div class="tools-nav">
       <a class="tool-link" href="/ar/compress-image-to-20kb/"><span class="tl-icon">📋</span><span>20 KB</span><span class="tl-sub">Gov forms</span></a>
       <a class="tool-link" href="/ar/compress-image-to-50kb/"><span class="tl-icon">🪪</span><span>50 KB</span><span class="tl-sub">Passport photos</span></a>

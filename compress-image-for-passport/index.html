@@ -55,9 +55,11 @@
     "@context": "https://schema.org",
     "@type": "FAQPage",
     "mainEntity": [
-      {"@type": "Question", "name": "What size should a passport photo be for online forms?", "acceptedAnswer": {"@type": "Answer", "text": "It depends on the specific form. Most government portals require between 20KB and 200KB. Always check the specific requirements of your form."}},
-      {"@type": "Question", "name": "Is it safe to compress my passport photo online?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, with our tool it is completely safe. All compression happens entirely inside your browser — your passport photo is never uploaded to any server."}},
-      {"@type": "Question", "name": "Can I compress a passport photo to 20KB?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Click the 20 KB preset button before uploading your photo. The tool will compress your passport photo to 20KB or below."}}
+      {"@type": "Question", "name": "What size should a passport photo be for online forms?", "acceptedAnswer": {"@type": "Answer", "text": "It depends on the specific form. Most government portals require between 20KB and 200KB. Indian government portals often require 20–50KB, while US and European visa applications typically allow up to 200KB or more. Always check the specific requirements of your form."}},
+      {"@type": "Question", "name": "Is it safe to compress my passport photo online?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, with our tool it is completely safe. All compression happens entirely inside your browser — your passport photo is never uploaded to any server, never stored, and never seen by anyone other than you."}},
+      {"@type": "Question", "name": "Can I compress a passport photo to 20KB?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Click the 20 KB preset button before uploading your photo. The tool will compress your passport photo to 20KB or below while maintaining the best possible quality at that size."}},
+      {"@type": "Question", "name": "Does compressing a passport photo reduce its quality?", "acceptedAnswer": {"@type": "Answer", "text": "Our tool uses a binary search algorithm to find the highest possible JPEG quality that still fits within your target size. For passport photos (typically 200×230 px or 600×600 px), compressing to 50KB still produces a sharp, clear image accepted by all major government portals."}},
+      {"@type": "Question", "name": "My passport photo was rejected even after compressing — why?", "acceptedAnswer": {"@type": "Answer", "text": "File size is only one requirement. The most common reasons for rejection after compression are: wrong pixel dimensions, background not white enough, face not centered, or glasses in the photo. Check the portal's full requirements and fix those issues before re-compressing."}}
     ]
   }
   </script>
@@ -271,12 +273,39 @@
   </div>
 
   <div class="section">
+    <h2>Passport Photo Technical Specifications by Country</h2>
+    <p>Every country has different technical requirements for passport and visa photos. The table below covers the most common portals. <strong>File size is only one requirement</strong> — always verify pixel dimensions and background color with the official portal before submitting.</p>
+    <table class="size-table" style="width:100%;border-collapse:collapse;font-size:14px;margin:16px 0;">
+      <thead><tr><th style="padding:10px 14px;text-align:left;background:#f3f4f6;border:1px solid #e5e7eb;">Country / Portal</th><th style="padding:10px 14px;text-align:left;background:#f3f4f6;border:1px solid #e5e7eb;">File Size</th><th style="padding:10px 14px;text-align:left;background:#f3f4f6;border:1px solid #e5e7eb;">Dimensions</th><th style="padding:10px 14px;text-align:left;background:#f3f4f6;border:1px solid #e5e7eb;">Background</th></tr></thead>
+      <tbody>
+        <tr><td style="padding:9px 14px;border:1px solid #e5e7eb;"><strong>USA – DS-160 Visa</strong></td><td style="padding:9px 14px;border:1px solid #e5e7eb;">10 KB – 240 KB</td><td style="padding:9px 14px;border:1px solid #e5e7eb;">600 × 600 px</td><td style="padding:9px 14px;border:1px solid #e5e7eb;">White or off-white</td></tr>
+        <tr><td style="padding:9px 14px;border:1px solid #e5e7eb;"><strong>UK – UKVI Visa</strong></td><td style="padding:9px 14px;border:1px solid #e5e7eb;">50 KB – 6 MB</td><td style="padding:9px 14px;border:1px solid #e5e7eb;">600 × 750 px</td><td style="padding:9px 14px;border:1px solid #e5e7eb;">Cream or light grey</td></tr>
+        <tr><td style="padding:9px 14px;border:1px solid #e5e7eb;"><strong>Schengen / EU Visa</strong></td><td style="padding:9px 14px;border:1px solid #e5e7eb;">50 KB – 200 KB</td><td style="padding:9px 14px;border:1px solid #e5e7eb;">35 × 45 mm</td><td style="padding:9px 14px;border:1px solid #e5e7eb;">White or light grey</td></tr>
+        <tr><td style="padding:9px 14px;border:1px solid #e5e7eb;"><strong>India – Passport Seva</strong></td><td style="padding:9px 14px;border:1px solid #e5e7eb;">20 KB – 50 KB</td><td style="padding:9px 14px;border:1px solid #e5e7eb;">200 × 200 px</td><td style="padding:9px 14px;border:1px solid #e5e7eb;">White</td></tr>
+        <tr><td style="padding:9px 14px;border:1px solid #e5e7eb;"><strong>India – UPSC / SSC / IBPS</strong></td><td style="padding:9px 14px;border:1px solid #e5e7eb;">20 KB – 50 KB</td><td style="padding:9px 14px;border:1px solid #e5e7eb;">200 × 230 px</td><td style="padding:9px 14px;border:1px solid #e5e7eb;">White</td></tr>
+        <tr><td style="padding:9px 14px;border:1px solid #e5e7eb;"><strong>Canada – eTA / Visa</strong></td><td style="padding:9px 14px;border:1px solid #e5e7eb;">Up to 4 MB</td><td style="padding:9px 14px;border:1px solid #e5e7eb;">420 × 540 px</td><td style="padding:9px 14px;border:1px solid #e5e7eb;">White</td></tr>
+        <tr><td style="padding:9px 14px;border:1px solid #e5e7eb;"><strong>Australia – ImmiAccount</strong></td><td style="padding:9px 14px;border:1px solid #e5e7eb;">Up to 5 MB</td><td style="padding:9px 14px;border:1px solid #e5e7eb;">900 × 900 px</td><td style="padding:9px 14px;border:1px solid #e5e7eb;">White or light grey</td></tr>
+      </tbody>
+    </table>
+    <h3>Why Passport Photos Get Rejected (And How to Avoid It)</h3>
+    <p>File size is the easiest requirement to fix — this tool handles it in seconds. But most passport photo rejections are caused by other issues that you need to fix before compressing:</p>
+    <p><strong>Wrong pixel dimensions:</strong> If the portal requires 600×600 px and your photo is 1200×800 px, resize it first using your phone's crop tool or any free image editor. This tool does not resize — it only reduces file size.</p>
+    <p><strong>Background not white:</strong> Many portals use automated background detection. If your background is off-white, cream, or has shadows, the portal may reject the photo automatically. Use a white wall or a background removal tool before compressing.</p>
+    <p><strong>Face not centered or too small:</strong> Most standards require the face to occupy 70–80% of the frame. If there is too much empty space above the head or below the chin, crop the photo before uploading here.</p>
+    <p><strong>Glasses or head covering:</strong> US, UK, and most EU visa applications no longer accept photos with glasses. Religious head coverings are generally accepted if the face is fully visible.</p>
+    <h3>How to Check If Your Photo Meets the Requirements</h3>
+    <p>After compressing, open the downloaded file and check: (1) the file size shown in your file manager matches the portal's limit, (2) the pixel dimensions match (right-click → Get Info on Mac, or Properties on Windows), and (3) the image looks sharp and the face is clearly visible. If all three are correct, your photo is ready to upload.</p>
+  </div>
+
+  <div class="section">
     <h2>Frequently Asked Questions</h2>
     <div class="faq">
       <div class="faq-item"><div class="faq-q">What size should a passport photo be for online forms?</div><div class="faq-a">It depends on the specific form. Most government portals require between 20KB and 200KB. Indian government portals often require 20–50KB, while US and European visa applications typically allow up to 200KB or more. Always check the specific requirements of your form.</div></div>
       <div class="faq-item"><div class="faq-q">Is it safe to compress my passport photo online?</div><div class="faq-a">Yes, with our tool it is completely safe. All compression happens entirely inside your browser — your passport photo is never uploaded to any server, never stored, and never seen by anyone other than you. This is especially important for sensitive ID documents.</div></div>
       <div class="faq-item"><div class="faq-q">What format should a passport photo be in?</div><div class="faq-a">Most government portals accept JPEG (.jpg) format. Our tool outputs JPEG files, which is the standard format for passport photos and ID uploads.</div></div>
       <div class="faq-item"><div class="faq-q">Can I compress a passport photo to 20KB?</div><div class="faq-a">Yes. Click the 20 KB preset button before uploading your photo. The tool will compress your passport photo to 20KB or below while maintaining the best possible quality at that size.</div></div>
+      <div class="faq-item"><div class="faq-q">Does compressing a passport photo reduce its quality?</div><div class="faq-a">Our tool uses a binary search algorithm to find the highest possible JPEG quality that still fits within your target size. For passport photos (typically 200×230 px or 600×600 px), compressing to 50KB still produces a sharp, clear image that is accepted by all major government portals.</div></div>
+      <div class="faq-item"><div class="faq-q">My photo was rejected even after compressing — why?</div><div class="faq-a">File size is only one requirement. The most common reasons for rejection after compression are: wrong pixel dimensions, background not white enough, face not centered, or glasses in the photo. Check the portal's full requirements and fix those issues before re-compressing.</div></div>
     </div>
   </div>
 

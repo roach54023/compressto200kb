@@ -191,6 +191,26 @@
       nav::-webkit-scrollbar { display: none; }
       nav a { white-space: nowrap; font-size: 12px; }
     }
+
+  /* RTL overrides for Arabic */
+  [dir="rtl"] body { direction: rtl; }
+  [dir="rtl"] .section h2,
+  [dir="rtl"] .section h3,
+  [dir="rtl"] .section p,
+  [dir="rtl"] .hero h1,
+  [dir="rtl"] .hero p { text-align: right; }
+  [dir="rtl"] .size-table th { text-align: right; }
+  [dir="rtl"] .size-table td { text-align: right; }
+  [dir="rtl"] .faq-q { flex-direction: row-reverse; }
+  [dir="rtl"] .faq-q::after { margin-left: 0; margin-right: 12px; }
+  [dir="rtl"] .step { flex-direction: row-reverse; }
+  [dir="rtl"] .step-body { text-align: right; }
+  [dir="rtl"] nav { flex-direction: row-reverse; }
+  [dir="rtl"] .result-item { flex-direction: row-reverse; }
+  [dir="rtl"] .result-info { text-align: right; }
+  [dir="rtl"] ol { padding-right: 20px; padding-left: 0; }
+  [dir="rtl"] .size-row { flex-direction: row-reverse; justify-content: flex-end; }
+  [dir="rtl"] .badges { flex-direction: row-reverse; }
   </style>
   <!-- Structured Data: BreadcrumbList -->
   <script type="application/ld+json">
@@ -232,7 +252,7 @@
 
 <div class="hero">
   <h1>ضغط الصور إلى <span>100KB</span> مجاناً عبر الإنترنت</h1>
-  <p>Reduce any JPG, PNG or WEBP photo to exactly 100KB — instantly, privately, with no server upload. Perfect for government forms, UPSC, SSC, and passport photos.</p>
+  <p>قم بتقليل حجم أي صورة بتنسيق JPG أو PNG أو WEBP إلى 100 كيلو بايت بالضبط - على الفور، وبشكل خاص، دون الحاجة إلى التحميل على الخادم. مثالية للنماذج الحكومية، UPSC، SSC، وصور جواز السفر.</p>
   <div class="badges">
     <span class="badge">✓ Free Forever</span>
     <span class="badge">✓ بدون رفع للخادم</span>
@@ -258,8 +278,8 @@
   </div>
   <div class="dropzone" id="dropzone">
     <div class="dropzone-icon">🖼️</div>
-    <h3>Drop your images here</h3>
-    <p>Supports JPG, PNG, WEBP · Up to 20 images at once</p>
+    <h3>أسقط صورك هنا</h3>
+    <p>يدعم JPG، PNG، WEBP · ما يصل إلى 20 صورة في وقت واحد</p>
     <button class="btn-select" onclick="document.getElementById('fileInput').click()">📁 Select Images</button>
     <input type="file" id="fileInput" accept="image/jpeg,image/png,image/webp" multiple />
   </div>
@@ -270,8 +290,8 @@
 <div class="content-wrap">
 
   <div class="section">
-    <h2>When Do You Need to Compress an Image to 100KB?</h2>
-    <p>100KB is one of the most common file size limits for online form uploads. Government portals, exam registration systems, and university admission forms frequently require photos under 100KB because this size balances acceptable image quality with fast upload speeds on slow connections.</p>
+    <h2>متى تحتاج إلى ضغط الصورة إلى 100 كيلو بايت؟</h2>
+    <p>يعد 100 كيلو بايت أحد حدود حجم الملف الأكثر شيوعًا لعمليات تحميل النماذج عبر الإنترنت. تتطلب البوابات الحكومية وأنظمة تسجيل الامتحانات ونماذج القبول الجامعي في كثير من الأحيان صورًا يقل حجمها عن 100 كيلو بايت لأن هذا الحجم يوازن بين جودة الصورة المقبولة وسرعات التحميل العالية على الاتصالات البطيئة.</p>
     <table class="size-table">
       <thead><tr><th>Use Case</th><th>Typical Size Limit</th><th>Recommended Target</th></tr></thead>
       <tbody>
@@ -284,13 +304,13 @@
         <tr><td>Email signature image</td><td>No strict limit</td><td>50–100 KB</td></tr>
       </tbody>
     </table>
-    <h3>Why 100KB is the Most Common Upload Limit</h3>
-    <p>100KB has become a de-facto standard for online form uploads because it balances image quality with fast upload speeds on slow internet connections. A 100KB JPEG at typical dimensions (400×400 px) is still perfectly readable for identity verification purposes, while loading almost instantly even on 2G mobile networks. This is why Indian government portals like UPSC, SSC, and most bank portals use 100KB as their standard photo size limit.</p>
+    <h3>لماذا يعتبر 100 كيلو بايت هو الحد الأقصى للتحميل الأكثر شيوعًا</h3>
+    <p>لقد أصبح 100 كيلو بايت معيارًا فعليًا لتحميل النماذج عبر الإنترنت لأنه يوازن بين جودة الصورة وسرعات التحميل السريعة على اتصالات الإنترنت البطيئة. لا يزال ملف JPEG بحجم 100 كيلو بايت بأبعاد نموذجية (400×400 بكسل) قابلاً للقراءة بشكل مثالي لأغراض التحقق من الهوية، بينما يتم تحميله على الفور تقريبًا حتى على شبكات الهاتف المحمول 2G. ولهذا السبب تستخدم بوابات الحكومة الهندية مثل UPSC وSSC ومعظم بوابات البنوك 100 كيلو بايت كحد أقصى لحجم الصورة القياسي.</p>
     <p>If your form requires a smaller size, use the <strong>50 KB</strong> preset. For higher-quality images where the form allows up to 200 KB, use the <a href="/ar/">200 KB tool</a> instead.</p>
   </div>
 
   <div class="section">
-    <h2>How to Compress Image to 100KB in 3 Steps</h2>
+    <h2>كيفية ضغط الصورة إلى 100 كيلو بايت في 3 خطوات</h2>
     <ol style="padding-left:20px;color:var(--gray-600);line-height:2;">
       <li><strong>Select 100 KB</strong> — The 100 KB preset is pre-selected by default on this page.</li>
       <li><strong>Upload your image</strong> — Click "Select Images" or drag and drop up to 20 JPG, PNG, or WEBP files.</li>
@@ -300,39 +320,39 @@
   </div>
 
   <div class="section">
-    <h2>Frequently Asked Questions</h2>
+    <h2>الأسئلة المتداولة</h2>
     <div class="faq">
       <div class="faq-item">
-        <div class="faq-q">How do I compress a photo to 100KB for a government form?</div>
-        <div class="faq-a">Upload your photo to this tool with the 100 KB preset selected. The tool will compress your image to under 100KB while keeping the best possible quality. The resulting JPEG is accepted by most government portals, UPSC, SSC, and university admission forms. Make sure your photo dimensions also meet the portal's requirements (typically 200×230 px for Indian government forms).</div>
+        <div class="faq-q">كيف يمكنني ضغط صورة بحجم 100 كيلو بايت لنموذج حكومي؟</div>
+        <div class="faq-a">قم بتحميل صورتك إلى هذه الأداة مع تحديد الإعداد المسبق البالغ 100 كيلو بايت. ستقوم الأداة بضغط صورتك إلى أقل من 100 كيلو بايت مع الحفاظ على أفضل جودة ممكنة. يتم قبول تنسيق JPEG الناتج في معظم البوابات الحكومية وUPSC وSSC ونماذج القبول بالجامعات. تأكد من أن أبعاد صورتك تتوافق أيضًا مع متطلبات البوابة (عادةً 200 × 230 بكسل لنماذج الحكومة الهندية).</div>
       </div>
       <div class="faq-item">
-        <div class="faq-q">Does compressing to 100KB reduce image quality?</div>
-        <div class="faq-a">Yes, some quality reduction is inevitable when compressing to a specific file size. However, our binary-search algorithm finds the highest possible quality that still meets your 100KB target, so quality loss is minimized. For passport photos and form uploads, the result is visually clear and acceptable for identity verification.</div>
+        <div class="faq-q">هل يؤدي الضغط إلى 100 كيلو بايت إلى تقليل جودة الصورة؟</div>
+        <div class="faq-a">نعم، يعد تقليل الجودة أمرًا لا مفر منه عند الضغط إلى حجم ملف معين. ومع ذلك، تجد خوارزمية البحث الثنائي الخاصة بنا أعلى جودة ممكنة لا تزال تلبي هدفك البالغ 100 كيلو بايت، وبالتالي يتم تقليل فقدان الجودة إلى الحد الأدنى. بالنسبة لصور جواز السفر وتحميل النماذج، تكون النتيجة واضحة بصريًا ومقبولة للتحقق من الهوية.</div>
       </div>
       <div class="faq-item">
-        <div class="faq-q">Is my image uploaded to a server when compressing to 100KB?</div>
+        <div class="faq-q">هل يتم تحميل صورتي إلى الخادم عند ضغطها إلى 100 كيلو بايت؟</div>
         <div class="faq-a">No. All processing happens entirely inside your web browser using the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API" target="_blank" rel="noopener">HTML5 Canvas API</a>. Your images are never sent to any server, never stored anywhere, and never seen by anyone other than you. This is especially important for sensitive documents like passport photos and ID scans.</div>
       </div>
       <div class="faq-item">
-        <div class="faq-q">Can I compress multiple images to 100KB at once?</div>
-        <div class="faq-a">Yes! You can select up to 20 images at once. All of them will be compressed to 100KB simultaneously. Download them individually or all at once.</div>
+        <div class="faq-q">هل يمكنني ضغط عدة صور بحجم 100 كيلو بايت مرة واحدة؟</div>
+        <div class="faq-a">نعم! يمكنك اختيار ما يصل إلى 20 صورة في وقت واحد. سيتم ضغطها جميعًا إلى 100 كيلو بايت في وقت واحد. قم بتنزيلها بشكل فردي أو كلها مرة واحدة.</div>
       </div>
       <div class="faq-item">
-        <div class="faq-q">What is the best image size for UPSC and SSC exam registration?</div>
+        <div class="faq-q">ما هو أفضل حجم للصورة لتسجيل امتحانات UPSC وSSC؟</div>
         <div class="faq-a">Most UPSC and SSC exam portals require photos between 20KB and 100KB, with dimensions around 200×230 pixels. Use the 100KB preset on this tool to compress your photo to the required size. For very strict portals requiring under 50KB, use the <a href="/ar/compress-image-to-50kb/">50KB tool</a> instead.</div>
       </div>
       <div class="faq-item">
-        <div class="faq-q">What formats does this 100KB compressor support?</div>
-        <div class="faq-a">The tool supports JPG/JPEG, PNG, and WEBP input formats. All output files are saved as JPEG (.jpg), which provides the best compression ratio for photographs. If you upload a PNG with transparency, the transparent areas will be filled with white in the output.</div>
+        <div class="faq-q">ما هي التنسيقات التي يدعمها هذا الضاغط بسعة 100 كيلو بايت؟</div>
+        <div class="faq-a">تدعم الأداة تنسيقات الإدخال JPG/JPEG وPNG وWEBP. يتم حفظ كافة ملفات الإخراج بتنسيق JPEG (.jpg)، مما يوفر أفضل نسبة ضغط للصور الفوتوغرافية. إذا قمت بتحميل ملف PNG بشفافية، فسيتم ملء المناطق الشفافة باللون الأبيض في الإخراج.</div>
       </div>
     </div>
   </div>
 
   <div class="section">
-    <h2>100KB Image Quality: What to Expect</h2>
-    <p>Understanding what 100KB looks like in practice helps you decide whether it's the right target for your use case.</p>
-    <h3>At 100KB, a typical photo looks like this:</h3>
+    <h2>جودة صورة بحجم 100 كيلو بايت: ما يمكن توقعه</h2>
+    <p>إن فهم شكل 100 كيلو بايت عمليًا يساعدك على تحديد ما إذا كان هو الهدف المناسب لحالة الاستخدام الخاصة بك.</p>
+    <h3>بحجم 100 كيلو بايت، تبدو الصورة النموذجية كما يلي:</h3>
     <table class="size-table">
       <thead><tr><th>Image Dimensions</th><th>Approx. JPEG Quality</th><th>Visual Result</th></tr></thead>
       <tbody>
@@ -342,15 +362,15 @@
         <tr><td>1920 × 1080 px (full HD)</td><td>~40–55%</td><td>Acceptable — visible compression at 100%</td></tr>
       </tbody>
     </table>
-    <h3>100KB vs 200KB: Is There a Visible Difference?</h3>
-    <p>For passport-size photos (200×230 px), there is virtually no visible difference between 100KB and 200KB — both look sharp and clear. For larger images (800px+), 200KB will look noticeably better. If your portal allows up to 200KB, use the 200KB tool for better quality. If the limit is 100KB, this tool gives you the best possible result within that constraint.</p>
-    <h3>Portals That Commonly Use 100KB as Their Limit</h3>
-    <p>The 100KB limit is used by a wide range of Indian government and educational portals, including UPSC Civil Services, most state PSC boards, NTA (for NEET and JEE), many university admission portals, and most bank account opening forms. If you're unsure which size to use, 100KB is the safest choice for Indian government portals — it fits within almost every portal's allowed range.</p>
+    <h3>100 كيلو بايت مقابل 200 كيلو بايت: هل هناك فرق واضح؟</h3>
+    <p>بالنسبة للصور بحجم جواز السفر (200 × 230 بكسل)، لا يوجد فرق واضح تقريبًا بين 100 كيلو بايت و200 كيلو بايت - فكلاهما يبدو حادًا وواضحًا. بالنسبة للصور الأكبر حجمًا (+800 بكسل)، سيبدو حجم 200 كيلو بايت أفضل بشكل ملحوظ. إذا كانت بوابتك تسمح بسعة تصل إلى 200 كيلو بايت، فاستخدم أداة 200 كيلو بايت للحصول على جودة أفضل. إذا كان الحد الأقصى هو 100 كيلو بايت، فإن هذه الأداة تمنحك أفضل نتيجة ممكنة ضمن هذا القيد.</p>
+    <h3>البوابات التي تستخدم عادةً 100 كيلو بايت كحد أقصى</h3>
+    <p>يتم استخدام حد 100 كيلو بايت من قبل مجموعة واسعة من البوابات الحكومية والتعليمية الهندية، بما في ذلك UPSC Civil Service، ومعظم مجالس PSC بالولاية، وNTA (لـ NEET وJEE)، والعديد من بوابات القبول بالجامعات، ومعظم نماذج فتح الحسابات المصرفية. إذا لم تكن متأكدًا من الحجم الذي تريد استخدامه، فإن 100 كيلو بايت هو الخيار الأكثر أمانًا لبوابات الحكومة الهندية - فهو يقع ضمن النطاق المسموح به لكل بوابة تقريبًا.</p>
   </div>
 
   <div class="section">
-    <h2>Other Target Sizes</h2>
-    <p>Need a different file size? Choose from our dedicated tools for the most popular targets:</p>
+    <h2>أحجام الأهداف الأخرى</h2>
+    <p>هل تحتاج إلى حجم ملف مختلف؟ اختر من أدواتنا المخصصة للأهداف الأكثر شيوعًا:</p>
     <div class="tools-nav">
       <a class="tool-link" href="/ar/compress-image-to-20kb/"><span class="tl-icon">📋</span><span>20 KB</span><span class="tl-sub">Strict gov forms</span></a>
       <a class="tool-link" href="/ar/compress-image-to-50kb/"><span class="tl-icon">🪪</span><span>50 KB</span><span class="tl-sub">Passport photos</span></a>

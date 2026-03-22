@@ -158,6 +158,26 @@
     footer { background: #fff; border-top: 1px solid var(--gray-200); padding: 28px 24px; text-align: center; font-size: 13px; color: var(--gray-500); }
     footer a { color: var(--gray-500); text-decoration: none; margin: 0 8px; }
     footer a:hover { color: var(--primary); }
+
+  /* RTL overrides for Arabic */
+  [dir="rtl"] body { direction: rtl; }
+  [dir="rtl"] .section h2,
+  [dir="rtl"] .section h3,
+  [dir="rtl"] .section p,
+  [dir="rtl"] .hero h1,
+  [dir="rtl"] .hero p { text-align: right; }
+  [dir="rtl"] .size-table th { text-align: right; }
+  [dir="rtl"] .size-table td { text-align: right; }
+  [dir="rtl"] .faq-q { flex-direction: row-reverse; }
+  [dir="rtl"] .faq-q::after { margin-left: 0; margin-right: 12px; }
+  [dir="rtl"] .step { flex-direction: row-reverse; }
+  [dir="rtl"] .step-body { text-align: right; }
+  [dir="rtl"] nav { flex-direction: row-reverse; }
+  [dir="rtl"] .result-item { flex-direction: row-reverse; }
+  [dir="rtl"] .result-info { text-align: right; }
+  [dir="rtl"] ol { padding-right: 20px; padding-left: 0; }
+  [dir="rtl"] .size-row { flex-direction: row-reverse; justify-content: flex-end; }
+  [dir="rtl"] .badges { flex-direction: row-reverse; }
   </style>
   <link rel="alternate" hreflang="en" href="https://compressto200kb.com/compress-jpeg-to-200kb/" />
   <link rel="alternate" hreflang="zh-CN" href="https://compressto200kb.com/zh/compress-jpeg-to-200kb/" />
@@ -188,7 +208,7 @@
 
 <div class="hero">
   <h1>ضغط <span>JPEG إلى 200KB</span> مجاناً عبر الإنترنت</h1>
-  <p>Reduce any JPG photo to exactly 200KB — instantly, in your browser. No server upload, no registration, 100% private.</p>
+  <p>قم بتقليل حجم أي صورة JPG إلى 200 كيلو بايت بالضبط - على الفور، في متصفحك. لا يوجد تحميل على الخادم، ولا تسجيل، خاص بنسبة 100%.</p>
   <div class="badges">
     <span class="badge">✓ Free Forever</span>
     <span class="badge">✓ بدون رفع للخادم</span>
@@ -214,8 +234,8 @@
   </div>
   <div class="dropzone" id="dropzone">
     <div class="dropzone-icon">🖼️</div>
-    <h3>Drop your images here</h3>
-    <p>Supports JPG, PNG, WEBP · Up to 20 images at once</p>
+    <h3>أسقط صورك هنا</h3>
+    <p>يدعم JPG، PNG، WEBP · ما يصل إلى 20 صورة في وقت واحد</p>
     <button class="btn-select" onclick="document.getElementById('fileInput').click()">
       📁 Select Images
     </button>
@@ -228,26 +248,26 @@
 <div class="content-wrap">
 
   <div class="section">
-    <h2>How to Compress a JPEG to 200KB</h2>
+    <h2>كيفية ضغط ملف JPEG إلى 200 كيلو بايت</h2>
     <div class="steps">
       <div class="step">
         <div class="step-num">1</div>
         <div class="step-body">
-          <h4>Select 200 KB as your target size</h4>
-          <p>The 200 KB preset is selected by default. This is the most common upload limit for JPEG photos on government portals, job applications, and social platforms.</p>
+          <h4>حدد 200 كيلو بايت كحجم مستهدف</h4>
+          <p>يتم تحديد الإعداد المسبق البالغ 200 كيلو بايت بشكل افتراضي. هذا هو الحد الأكثر شيوعًا للتحميل لصور JPEG على البوابات الحكومية وطلبات العمل والمنصات الاجتماعية.</p>
         </div>
       </div>
       <div class="step">
         <div class="step-num">2</div>
         <div class="step-body">
-          <h4>Upload your image</h4>
+          <h4>قم بتحميل صورتك</h4>
           <p>Click <strong>Select Images</strong> or drag and drop your JPG, PNG or WEBP file. Compression starts automatically — no waiting, no server upload.</p>
         </div>
       </div>
       <div class="step">
         <div class="step-num">3</div>
         <div class="step-body">
-          <h4>Download the compressed file</h4>
+          <h4>قم بتنزيل الملف المضغوط</h4>
           <p>Your compressed image appears instantly with a before/after size comparison. Click <strong>Download</strong> to save it.</p>
         </div>
       </div>
@@ -255,41 +275,41 @@
   </div>
 
   <div class="section">
-    <h2>About JPEG Compression to 200KB</h2>
+    <h2>حول ضغط JPEG إلى 200 كيلو بايت</h2>
     <p>JPEG (Joint Photographic Experts Group) is the world's most widely used image format for photographs. It achieves small file sizes through <strong>lossy compression</strong> — a process that permanently removes some image data that the human eye is least likely to notice. When you compress a JPEG to 200KB, our tool uses a binary search algorithm to find the highest possible quality level that still produces a file at or below your target.</p>
 
-    <h3>How JPEG Quality Levels Work</h3>
+    <h3>كيف تعمل مستويات جودة JPEG</h3>
     <p>JPEG quality is typically expressed as a value from 1 to 100 (or 0.01 to 0.99 in the browser Canvas API). At quality 95, a photo looks nearly identical to the original but may be 3–5× larger than at quality 70. Our binary search starts at quality 0.5, checks the resulting file size, then moves up or down by half the remaining range — converging on the optimal quality in just 10–15 iterations. This guarantees you get the <em>highest possible quality</em> that fits within 200KB.</p>
 
-    <h3>JPEG vs PNG: Which Should You Use?</h3>
-    <p>JPEG is ideal for photographs, portraits, and images with gradients — it achieves 5–10× smaller files than PNG for the same visual quality. PNG is better for screenshots, logos, diagrams, and images with sharp edges or text, because PNG uses lossless compression that preserves every pixel exactly. If you upload a PNG to this tool, it will be converted to JPEG for compression — which is usually fine for photos but may introduce artifacts on text or line art.</p>
+    <h3>JPEG مقابل PNG: ما الذي يجب أن تستخدمه؟</h3>
+    <p>يعد JPEG مثاليًا للصور الفوتوغرافية والصور الشخصية والصور ذات التدرجات اللونية - فهو يحقق ملفات أصغر بمقدار 5 إلى 10 مرات من PNG بنفس الجودة المرئية. يعد PNG أفضل للقطات الشاشة والشعارات والرسوم البيانية والصور ذات الحواف الحادة أو النصوص، لأن PNG يستخدم الضغط بدون فقدان البيانات الذي يحافظ على كل بكسل تمامًا. إذا قمت بتحميل ملف PNG إلى هذه الأداة، فسيتم تحويله إلى JPEG للضغط - وهو أمر جيد عادةً للصور ولكنه قد يقدم عناصر فنية على النص أو الرسم الخطي.</p>
 
-    <h3>JPEG EXIF Data and Metadata</h3>
-    <p>When our tool re-encodes your JPEG using the Canvas API, EXIF metadata (camera model, GPS location, shooting date) is stripped from the output. This is actually a privacy benefit — your compressed file won't contain location data or device information. If you need to preserve EXIF data, consider using a desktop tool like Lightroom or ImageMagick instead.</p>
+    <h3>بيانات JPEG EXIF ​​والبيانات الوصفية</h3>
+    <p>عندما تقوم أداتنا بإعادة تشفير ملف JPEG الخاص بك باستخدام Canvas API، تتم إزالة البيانات التعريفية EXIF ​​(طراز الكاميرا وموقع GPS وتاريخ التصوير) من الإخراج. يعد هذا في الواقع ميزة تتعلق بالخصوصية - لن يحتوي ملفك المضغوط على بيانات الموقع أو معلومات الجهاز. إذا كنت بحاجة إلى الاحتفاظ ببيانات EXIF، ففكر في استخدام أداة سطح المكتب مثل Lightroom أو ImageMagick بدلاً من ذلك.</p>
 
-    <h3>Common 200KB JPEG Use Cases</h3>
-    <p>The 200KB limit is enforced by Indian government exam portals (UPSC, SSC, IBPS), university admission systems, bank KYC forms, job application platforms, and many social media profile picture uploaders. A well-compressed 200KB JPEG at 600×800 pixels typically achieves quality 70–80, which is visually excellent for identity documents and profile photos.</p>
+    <h3>حالات استخدام JPEG الشائعة بسعة 200 كيلو بايت</h3>
+    <p>يتم فرض حد 200 كيلو بايت من خلال بوابات امتحانات الحكومة الهندية (UPSC، SSC، IBPS)، وأنظمة القبول بالجامعات، ونماذج KYC المصرفية، ومنصات طلبات الوظائف، والعديد من القائمين على تحميل صور الملفات الشخصية على وسائل التواصل الاجتماعي. عادةً ما تحقق ملفات JPEG المضغوطة جيدًا بحجم 200 كيلو بايت بدقة 600 × 800 بكسل جودة تتراوح بين 70 و80، وهي ممتازة بصريًا لمستندات الهوية وصور الملفات الشخصية.</p>
 
-    <h3>Privacy &amp; Security</h3>
-    <p>All compression happens inside your browser using the HTML5 Canvas API. Your JPEG files are never sent to any server, never stored, and never seen by anyone other than you. This is especially important for sensitive documents like passport photos, ID scans, and bank documents.</p>
+    <h3>الخصوصية والأمبير. حماية</h3>
+    <p>تتم جميع عمليات الضغط داخل متصفحك باستخدام HTML5 Canvas API. لا يتم إرسال ملفات JPEG الخاصة بك مطلقًا إلى أي خادم، ولا يتم تخزينها مطلقًا، ولا يراها أي شخص آخر غيرك. وهذا مهم بشكل خاص للمستندات الحساسة مثل صور جواز السفر، ومسح الهوية، والمستندات المصرفية.</p>
   </div>
 
   <div class="section">
-    <h2>Frequently Asked Questions</h2>
+    <h2>الأسئلة المتداولة</h2>
     <div class="faq">
-      <div class="faq-item"><div class="faq-q">How do I compress a JPEG to exactly 200KB?</div><div class="faq-a">Upload your JPEG file to this tool with the 200 KB preset selected (it's the default). The tool automatically finds the highest quality that produces a file at or below 200KB using a binary search algorithm.</div></div>
-      <div class="faq-item"><div class="faq-q">Will compressing a JPEG to 200KB reduce quality?</div><div class="faq-a">Yes, some quality reduction is inevitable when compressing to a specific file size. However, our algorithm finds the highest possible quality that still meets your 200KB target, minimizing quality loss. For most use cases like form uploads and profile pictures, the result is visually excellent.</div></div>
-      <div class="faq-item"><div class="faq-q">Is my JPEG uploaded to a server?</div><div class="faq-a">No. All processing happens entirely inside your web browser using the HTML5 Canvas API. Your JPEG files are never sent to any server, never stored anywhere, and never seen by anyone other than you.</div></div>
-      <div class="faq-item"><div class="faq-q">What is the output format?</div><div class="faq-a">The output is always a JPEG (.jpg) file. If you upload a PNG or WEBP, it will be converted to JPEG for compression. JPEG provides the best compression ratio for photographs.</div></div>
-      <div class="faq-item"><div class="faq-q">Does JPEG compression remove EXIF metadata?</div><div class="faq-a">Yes. When our tool re-encodes your JPEG using the browser Canvas API, EXIF metadata (GPS location, camera model, shooting date) is stripped from the output. This is a privacy benefit — your compressed file won't contain personal location data.</div></div>
-      <div class="faq-item"><div class="faq-q">What JPEG quality level does the tool use?</div><div class="faq-a">The tool doesn't use a fixed quality level. Instead, it uses a binary search algorithm to find the highest quality that produces a file at or below your target size. For a 200KB target, most photos end up at quality 65–85 depending on image complexity and dimensions.</div></div>
-      <div class="faq-item"><div class="faq-q">Can I compress a JPEG to exactly 200KB (not under)?</div><div class="faq-a">The tool targets at or below 200KB. Due to how JPEG encoding works, hitting exactly 200.0KB is not reliably achievable. The output will be as close to 200KB as possible while staying under the limit — typically within 1–5KB of the target.</div></div>
+      <div class="faq-item"><div class="faq-q">كيف يمكنني ضغط ملف JPEG إلى 200 كيلو بايت بالضبط؟</div><div class="faq-a">قم بتحميل ملف JPEG الخاص بك إلى هذه الأداة مع تحديد الإعداد المسبق بحجم 200 كيلو بايت (وهو الإعداد الافتراضي). تقوم الأداة تلقائيًا بالعثور على أعلى جودة تنتج ملفًا بحجم 200 كيلو بايت أو أقل باستخدام خوارزمية بحث ثنائية.</div></div>
+      <div class="faq-item"><div class="faq-q">هل سيؤدي ضغط ملف JPEG إلى 200 كيلو بايت إلى تقليل الجودة؟</div><div class="faq-a">نعم، يعد تقليل الجودة أمرًا لا مفر منه عند الضغط إلى حجم ملف معين. ومع ذلك، تجد الخوارزمية لدينا أعلى جودة ممكنة لا تزال تلبي هدفك وهو 200 كيلو بايت، مما يقلل من فقدان الجودة. بالنسبة لمعظم حالات الاستخدام مثل تحميل النماذج وصور الملفات الشخصية، تكون النتيجة ممتازة من الناحية المرئية.</div></div>
+      <div class="faq-item"><div class="faq-q">هل تم تحميل ملف JPEG الخاص بي إلى خادم؟</div><div class="faq-a">لا، تتم جميع عمليات المعالجة بالكامل داخل متصفح الويب الخاص بك باستخدام HTML5 Canvas API. لا يتم إرسال ملفات JPEG الخاصة بك إلى أي خادم أبدًا، ولا يتم تخزينها في أي مكان، ولا يراها أي شخص آخر غيرك.</div></div>
+      <div class="faq-item"><div class="faq-q">ما هو تنسيق الإخراج؟</div><div class="faq-a">يكون الإخراج دائمًا ملف JPEG (.jpg). إذا قمت بتحميل ملف PNG أو WEBP، فسيتم تحويله إلى JPEG للضغط. يوفر JPEG أفضل نسبة ضغط للصور الفوتوغرافية.</div></div>
+      <div class="faq-item"><div class="faq-q">هل يؤدي ضغط JPEG إلى إزالة بيانات EXIF ​​التعريفية؟</div><div class="faq-a">نعم. When our tool re-encodes your JPEG using the browser Canvas API, EXIF metadata (GPS location, camera model, shooting date) is stripped from the output. هذه فائدة تتعلق بالخصوصية - لن يحتوي ملفك المضغوط على بيانات الموقع الشخصية.</div></div>
+      <div class="faq-item"><div class="faq-q">ما هو مستوى جودة JPEG الذي تستخدمه الأداة؟</div><div class="faq-a">لا تستخدم الأداة مستوى جودة ثابتًا. بدلاً من ذلك، فإنه يستخدم خوارزمية بحث ثنائية للعثور على أعلى جودة تنتج ملفًا بالحجم المستهدف أو أقل منه. بالنسبة لهدف يبلغ 200 كيلو بايت، تنتهي معظم الصور بجودة 65-85 اعتمادًا على مدى تعقيد الصورة وأبعادها.</div></div>
+      <div class="faq-item"><div class="faq-q">هل يمكنني ضغط ملف JPEG إلى 200 كيلو بايت بالضبط (وليس أقل)؟</div><div class="faq-a">تستهدف الأداة 200 كيلو بايت أو أقل. نظرًا لكيفية عمل تشفير JPEG، فإن الوصول إلى 200.0 كيلو بايت بالضبط لا يمكن تحقيقه بشكل موثوق. سيكون الناتج أقرب ما يكون إلى 200 كيلو بايت قدر الإمكان مع البقاء أقل من الحد الأقصى - عادةً في حدود 1 إلى 5 كيلو بايت من الهدف.</div></div>
     </div>
   </div>
 
   <div class="section">
-    <h2>Other Target Sizes</h2>
-    <p>Need a different file size? Choose from our dedicated tools:</p>
+    <h2>أحجام الأهداف الأخرى</h2>
+    <p>هل تحتاج إلى حجم ملف مختلف؟ اختر من أدواتنا المخصصة:</p>
     <div class="tools-nav">
       <a class="tool-link" href="/ar/compress-image-to-20kb/"><span class="tl-icon">📋</span><span>20 KB</span><span class="tl-sub">Gov forms</span></a>
       <a class="tool-link" href="/ar/compress-image-to-50kb/"><span class="tl-icon">🪪</span><span>50 KB</span><span class="tl-sub">Passport photos</span></a>

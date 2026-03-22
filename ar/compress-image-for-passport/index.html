@@ -156,6 +156,26 @@
     footer { background: #fff; border-top: 1px solid var(--gray-200); padding: 28px 24px; text-align: center; font-size: 13px; color: var(--gray-500); }
     footer a { color: var(--gray-500); text-decoration: none; margin: 0 8px; }
     footer a:hover { color: var(--primary); }
+
+  /* RTL overrides for Arabic */
+  [dir="rtl"] body { direction: rtl; }
+  [dir="rtl"] .section h2,
+  [dir="rtl"] .section h3,
+  [dir="rtl"] .section p,
+  [dir="rtl"] .hero h1,
+  [dir="rtl"] .hero p { text-align: right; }
+  [dir="rtl"] .size-table th { text-align: right; }
+  [dir="rtl"] .size-table td { text-align: right; }
+  [dir="rtl"] .faq-q { flex-direction: row-reverse; }
+  [dir="rtl"] .faq-q::after { margin-left: 0; margin-right: 12px; }
+  [dir="rtl"] .step { flex-direction: row-reverse; }
+  [dir="rtl"] .step-body { text-align: right; }
+  [dir="rtl"] nav { flex-direction: row-reverse; }
+  [dir="rtl"] .result-item { flex-direction: row-reverse; }
+  [dir="rtl"] .result-info { text-align: right; }
+  [dir="rtl"] ol { padding-right: 20px; padding-left: 0; }
+  [dir="rtl"] .size-row { flex-direction: row-reverse; justify-content: flex-end; }
+  [dir="rtl"] .badges { flex-direction: row-reverse; }
   </style>
   <link rel="alternate" hreflang="en" href="https://compressto200kb.com/compress-image-for-passport/" />
   <link rel="alternate" hreflang="zh-CN" href="https://compressto200kb.com/zh/compress-image-for-passport/" />
@@ -186,7 +206,7 @@
 
 <div class="hero">
   <h1>ضغط <span>صورة جواز السفر</span></h1>
-  <p>Reduce your passport or ID photo to 50KB, 100KB or 200KB for visa applications and government portals. Instant, private, no server upload.</p>
+  <p>قم بتقليل حجم صورة جواز السفر أو بطاقة الهوية إلى 50 كيلو بايت أو 100 كيلو بايت أو 200 كيلو بايت لطلبات التأشيرة والبوابات الحكومية. فوري، خاص، لا يوجد تحميل على الخادم.</p>
   <div class="badges">
     <span class="badge">✓ Free Forever</span>
     <span class="badge">✓ بدون رفع للخادم</span>
@@ -212,8 +232,8 @@
   </div>
   <div class="dropzone" id="dropzone">
     <div class="dropzone-icon">🖼️</div>
-    <h3>Drop your images here</h3>
-    <p>Supports JPG, PNG, WEBP · Up to 20 images at once</p>
+    <h3>أسقط صورك هنا</h3>
+    <p>يدعم JPG، PNG، WEBP · ما يصل إلى 20 صورة في وقت واحد</p>
     <button class="btn-select" onclick="document.getElementById('fileInput').click()">
       📁 Select Images
     </button>
@@ -226,26 +246,26 @@
 <div class="content-wrap">
 
   <div class="section">
-    <h2>How to Compress a Passport Photo for Online Forms</h2>
+    <h2>كيفية ضغط صورة جواز السفر للنماذج عبر الإنترنت</h2>
     <div class="steps">
       <div class="step">
         <div class="step-num">1</div>
         <div class="step-body">
-          <h4>Choose the right target size for your form</h4>
-          <p>Most visa and government portals require passport photos between 20KB and 200KB. Check your form's requirements and select the matching preset. 50KB and 100KB are the most common limits.</p>
+          <h4>اختر الحجم المستهدف المناسب للنموذج الخاص بك</h4>
+          <p>تتطلب معظم بوابات التأشيرات والبوابات الحكومية صور جواز سفر يتراوح حجمها بين 20 كيلو بايت و200 كيلو بايت. تحقق من متطلبات النموذج الخاص بك وحدد الإعداد المسبق المطابق. 50 كيلو بايت و100 كيلو بايت هي الحدود الأكثر شيوعًا.</p>
         </div>
       </div>
       <div class="step">
         <div class="step-num">2</div>
         <div class="step-body">
-          <h4>Upload your image</h4>
+          <h4>قم بتحميل صورتك</h4>
           <p>Click <strong>Select Images</strong> or drag and drop your JPG, PNG or WEBP file. Compression starts automatically — no waiting, no server upload.</p>
         </div>
       </div>
       <div class="step">
         <div class="step-num">3</div>
         <div class="step-body">
-          <h4>Download the compressed file</h4>
+          <h4>قم بتنزيل الملف المضغوط</h4>
           <p>Your compressed image appears instantly with a before/after size comparison. Click <strong>Download</strong> to save it.</p>
         </div>
       </div>
@@ -253,9 +273,9 @@
   </div>
 
   <div class="section">
-    <h2>About This Tool</h2>
-    <p>Passport photos and ID photos are among the most commonly uploaded files on government portals, visa application systems, and online forms. These platforms typically impose strict file size limits — usually between 20KB and 200KB — to ensure fast processing and storage efficiency.</p>
-    <h3>Common Passport Photo Size Requirements</h3>
+    <h2>حول هذه الأداة</h2>
+    <p>تعد صور جواز السفر وصور الهوية من بين الملفات الأكثر شيوعًا التي يتم تحميلها على البوابات الحكومية وأنظمة طلبات التأشيرة والنماذج عبر الإنترنت. تفرض هذه الأنظمة الأساسية عادةً حدودًا صارمة لحجم الملف — عادةً ما بين 20 كيلو بايت و200 كيلو بايت — لضمان المعالجة السريعة وكفاءة التخزين.</p>
+    <h3>المتطلبات العامة لحجم صورة جواز السفر</h3>
     <table style="width:100%;border-collapse:collapse;font-size:14px;margin:16px 0;">
       <thead><tr style="background:#f9fafb;"><th style="padding:10px 14px;text-align:left;border-bottom:2px solid #e5e7eb;">Platform / Use Case</th><th style="padding:10px 14px;text-align:left;border-bottom:2px solid #e5e7eb;">Size Limit</th><th style="padding:10px 14px;text-align:left;border-bottom:2px solid #e5e7eb;">Recommended Target</th></tr></thead>
       <tbody>
@@ -267,23 +287,23 @@
         <tr><td style="padding:10px 14px;">Online exam registration</td><td style="padding:10px 14px;">50–200KB</td><td style="padding:10px 14px;">50KB</td></tr>
       </tbody>
     </table>
-    <h3>Privacy &amp; Security for ID Photos</h3>
-    <p>Passport photos and ID photos contain sensitive personal information. Our tool processes all images entirely inside your browser using the HTML5 Canvas API — your photos are never sent to any server, never stored, and never seen by anyone other than you. This makes it completely safe for sensitive documents.</p>
+    <h3>الخصوصية والأمبير. الأمان لصور الهوية</h3>
+    <p>تحتوي صور جواز السفر وصور الهوية على معلومات شخصية حساسة. تقوم أداتنا بمعالجة جميع الصور بالكامل داخل متصفحك باستخدام HTML5 Canvas API - لا يتم إرسال صورك أبدًا إلى أي خادم، ولا يتم تخزينها أبدًا، ولا يراها أي شخص آخر غيرك. وهذا يجعلها آمنة تمامًا للمستندات الحساسة.</p>
   </div>
 
   <div class="section">
-    <h2>Frequently Asked Questions</h2>
+    <h2>الأسئلة المتداولة</h2>
     <div class="faq">
-      <div class="faq-item"><div class="faq-q">What size should a passport photo be for online forms?</div><div class="faq-a">It depends on the specific form. Most government portals require between 20KB and 200KB. Indian government portals often require 20–50KB, while US and European visa applications typically allow up to 200KB or more. Always check the specific requirements of your form.</div></div>
-      <div class="faq-item"><div class="faq-q">Is it safe to compress my passport photo online?</div><div class="faq-a">Yes, with our tool it is completely safe. All compression happens entirely inside your browser — your passport photo is never uploaded to any server, never stored, and never seen by anyone other than you. This is especially important for sensitive ID documents.</div></div>
-      <div class="faq-item"><div class="faq-q">What format should a passport photo be in?</div><div class="faq-a">Most government portals accept JPEG (.jpg) format. Our tool outputs JPEG files, which is the standard format for passport photos and ID uploads.</div></div>
-      <div class="faq-item"><div class="faq-q">Can I compress a passport photo to 20KB?</div><div class="faq-a">Yes. Click the 20 KB preset button before uploading your photo. The tool will compress your passport photo to 20KB or below while maintaining the best possible quality at that size.</div></div>
+      <div class="faq-item"><div class="faq-q">ما الحجم الذي يجب أن تكون عليه صورة جواز السفر للنماذج عبر الإنترنت؟</div><div class="faq-a">ذلك يعتمد على النموذج المحدد. تتطلب معظم البوابات الحكومية ما بين 20 كيلو بايت و200 كيلو بايت. تتطلب بوابات الحكومة الهندية غالبًا ما يتراوح بين 20 إلى 50 كيلو بايت، بينما تسمح طلبات التأشيرة الأمريكية والأوروبية عادةً بما يصل إلى 200 كيلو بايت أو أكثر. تحقق دائمًا من المتطلبات المحددة للنموذج الخاص بك.</div></div>
+      <div class="faq-item"><div class="faq-q">هل من الآمن ضغط صورة جواز السفر عبر الإنترنت؟</div><div class="faq-a">نعم، مع أداتنا فهو آمن تمامًا. تتم جميع عمليات الضغط بالكامل داخل متصفحك - لا يتم تحميل صورة جواز السفر الخاصة بك على أي خادم، ولا يتم تخزينها أبدًا، ولا يراها أي شخص آخر غيرك. وهذا مهم بشكل خاص لوثائق الهوية الحساسة.</div></div>
+      <div class="faq-item"><div class="faq-q">ما هو التنسيق الذي يجب أن تكون عليه صورة جواز السفر؟</div><div class="faq-a">تقبل معظم البوابات الحكومية تنسيق JPEG (.jpg). تقوم أداتنا بإخراج ملفات JPEG، وهو التنسيق القياسي لصور جواز السفر وتحميل بطاقات الهوية.</div></div>
+      <div class="faq-item"><div class="faq-q">هل يمكنني ضغط صورة جواز السفر إلى 20 كيلو بايت؟</div><div class="faq-a">نعم. انقر فوق زر الإعداد المسبق بحجم 20 كيلوبايت قبل تحميل صورتك. ستقوم الأداة بضغط صورة جواز السفر الخاص بك إلى 20 كيلو بايت أو أقل مع الحفاظ على أفضل جودة ممكنة بهذا الحجم.</div></div>
     </div>
   </div>
 
   <div class="section">
-    <h2>Other Target Sizes</h2>
-    <p>Need a different file size? Choose from our dedicated tools:</p>
+    <h2>أحجام الأهداف الأخرى</h2>
+    <p>هل تحتاج إلى حجم ملف مختلف؟ اختر من أدواتنا المخصصة:</p>
     <div class="tools-nav">
       <a class="tool-link" href="/ar/compress-image-to-20kb/"><span class="tl-icon">📋</span><span>20 KB</span><span class="tl-sub">Gov forms</span></a>
       <a class="tool-link" href="/ar/compress-image-to-50kb/"><span class="tl-icon">🪪</span><span>50 KB</span><span class="tl-sub">Passport photos</span></a>

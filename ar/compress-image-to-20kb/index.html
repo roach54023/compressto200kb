@@ -191,6 +191,26 @@
       nav::-webkit-scrollbar { display: none; }
       nav a { white-space: nowrap; font-size: 12px; }
     }
+
+  /* RTL overrides for Arabic */
+  [dir="rtl"] body { direction: rtl; }
+  [dir="rtl"] .section h2,
+  [dir="rtl"] .section h3,
+  [dir="rtl"] .section p,
+  [dir="rtl"] .hero h1,
+  [dir="rtl"] .hero p { text-align: right; }
+  [dir="rtl"] .size-table th { text-align: right; }
+  [dir="rtl"] .size-table td { text-align: right; }
+  [dir="rtl"] .faq-q { flex-direction: row-reverse; }
+  [dir="rtl"] .faq-q::after { margin-left: 0; margin-right: 12px; }
+  [dir="rtl"] .step { flex-direction: row-reverse; }
+  [dir="rtl"] .step-body { text-align: right; }
+  [dir="rtl"] nav { flex-direction: row-reverse; }
+  [dir="rtl"] .result-item { flex-direction: row-reverse; }
+  [dir="rtl"] .result-info { text-align: right; }
+  [dir="rtl"] ol { padding-right: 20px; padding-left: 0; }
+  [dir="rtl"] .size-row { flex-direction: row-reverse; justify-content: flex-end; }
+  [dir="rtl"] .badges { flex-direction: row-reverse; }
   </style>
   <!-- Structured Data: BreadcrumbList -->
   <script type="application/ld+json">
@@ -232,7 +252,7 @@
 
 <div class="hero">
   <h1>ضغط الصور إلى <span>20KB</span> مجاناً عبر الإنترنت</h1>
-  <p>Reduce any JPG, PNG or WEBP photo to exactly 20KB — instantly, privately, with no server upload. For the strictest government portals and exam registration systems.</p>
+  <p>قم بتقليل حجم أي صورة بتنسيق JPG أو PNG أو WEBP إلى 20 كيلو بايت بالضبط - على الفور، وبشكل خاص، دون الحاجة إلى التحميل على الخادم. لأدق البوابات الحكومية وأنظمة التسجيل للامتحانات.</p>
   <div class="badges">
     <span class="badge">✓ Free Forever</span>
     <span class="badge">✓ بدون رفع للخادم</span>
@@ -258,8 +278,8 @@
   </div>
   <div class="dropzone" id="dropzone">
     <div class="dropzone-icon">🖼️</div>
-    <h3>Drop your images here</h3>
-    <p>Supports JPG, PNG, WEBP · Up to 20 images at once</p>
+    <h3>أسقط صورك هنا</h3>
+    <p>يدعم JPG، PNG، WEBP · ما يصل إلى 20 صورة في وقت واحد</p>
     <button class="btn-select" onclick="document.getElementById('fileInput').click()">📁 Select Images</button>
     <input type="file" id="fileInput" accept="image/jpeg,image/png,image/webp" multiple />
   </div>
@@ -270,8 +290,8 @@
 <div class="content-wrap">
 
   <div class="section">
-    <h2>When Do You Need to Compress an Image to 20KB?</h2>
-    <p>20KB is one of the strictest file size limits used by government portals and exam registration systems. Here are the most common situations:</p>
+    <h2>متى تحتاج إلى ضغط الصورة إلى 20 كيلو بايت؟</h2>
+    <p>يعد 20 كيلو بايت أحد الحدود الأكثر صرامة لحجم الملف التي تستخدمها البوابات الحكومية وأنظمة تسجيل الامتحانات. فيما يلي الحالات الأكثر شيوعًا:</p>
     <table class="size-table">
       <thead><tr><th>Use Case</th><th>Typical Size Limit</th><th>Recommended Target</th></tr></thead>
       <tbody>
@@ -283,50 +303,50 @@
         <tr><td>Municipal corporation forms</td><td>20 KB max</td><td>20 KB</td></tr>
       </tbody>
     </table>
-    <h3>Why Some Portals Require Images as Small as 20KB</h3>
-    <p>Government portals that require 20KB images were typically built on older infrastructure with limited server storage and bandwidth. These systems store millions of applicant photos, so keeping each file small reduces storage costs significantly. While modern systems have moved to 100KB or 200KB limits, many legacy portals still enforce the 20KB limit.</p>
+    <h3>لماذا تتطلب بعض البوابات صورًا يصل حجمها إلى 20 كيلو بايت؟</h3>
+    <p>عادةً ما يتم إنشاء البوابات الحكومية التي تتطلب صورًا بحجم 20 كيلو بايت على بنية أساسية قديمة ذات مساحة تخزين ونطاق ترددي محدودين على الخادم. تقوم هذه الأنظمة بتخزين الملايين من صور المتقدمين، لذا فإن الاحتفاظ بكل ملف صغير الحجم يقلل من تكاليف التخزين بشكل كبير. في حين أن الأنظمة الحديثة انتقلت إلى حدود 100 كيلو بايت أو 200 كيلو بايت، إلا أن العديد من البوابات القديمة لا تزال تفرض حد 20 كيلو بايت.</p>
   </div>
 
 
     <div class="section">
-      <h2>How to Get the Best Quality at 20KB</h2>
-      <p>20KB is a very small file size for a photo. Here's how to maximize quality:</p>
-      <h3>Resize Before Compressing</h3>
-      <p>If your portal requires a photo of 200×230 pixels, resize your image to exactly those dimensions before uploading to this tool. A 200×230px image at 20KB will look much better than a 1000×1000px image compressed to 20KB, because the compressor doesn't need to throw away as much detail.</p>
-      <h3>Use a Plain White Background</h3>
-      <p>Plain backgrounds compress extremely efficiently in JPEG format. A photo with a white background at 200×230px can easily fit in 20KB while keeping the face sharp.</p>
-      <h3>Good Lighting Matters</h3>
+      <h2>كيفية الحصول على أفضل جودة عند 20 كيلو بايت</h2>
+      <p>20 كيلو بايت هو حجم ملف صغير جدًا للصورة. وإليك كيفية تحقيق أقصى قدر من الجودة:</p>
+      <h3>تغيير الحجم قبل الضغط</h3>
+      <p>إذا كانت بوابتك الإلكترونية تتطلب صورة بحجم 200 × 230 بكسل، فقم بتغيير حجم الصورة إلى تلك الأبعاد بالضبط قبل التحميل إلى هذه الأداة. ستبدو صورة بحجم 200 × 230 بكسل بحجم 20 كيلو بايت أفضل بكثير من صورة بحجم 1000 × 1000 بكسل مضغوطة بحجم 20 كيلو بايت، لأن الضاغط لا يحتاج إلى التخلص من الكثير من التفاصيل.</p>
+      <h3>استخدم خلفية بيضاء عادية</h3>
+      <p>يتم ضغط الخلفيات العادية بكفاءة عالية بتنسيق JPEG. يمكن للصورة ذات الخلفية البيضاء مقاس 200 × 230 بكسل أن تتناسب بسهولة مع حجم 20 كيلو بايت مع الحفاظ على وضوح الوجه.</p>
+      <h3>مسائل الإضاءة الجيدة</h3>
       <p>Well-lit photos with even illumination compress better than dark or unevenly lit photos. According to <a href="https://developers.google.com/speed/webp/docs/compression" target="_blank" rel="noopener">Google's image compression research</a>, images with less noise and more uniform areas achieve significantly better compression ratios.</p>
     </div>
 
   <div class="section">
-    <h2>Frequently Asked Questions</h2>
+    <h2>الأسئلة المتداولة</h2>
     <div class="faq">
       <div class="faq-item">
-        <div class="faq-q">Which government portals require images under 20KB?</div>
-        <div class="faq-a">Several Indian government exam portals require photos under 20KB, including some state-level recruitment boards and older UPSC/SSC registration systems. Always check the specific portal's requirements. If the portal says '10KB to 20KB', use the 20KB preset on this tool.</div>
+        <div class="faq-q">ما هي البوابات الحكومية التي تتطلب صورًا يقل حجمها عن 20 كيلو بايت؟</div>
+        <div class="faq-a">تتطلب العديد من بوابات الامتحانات الحكومية الهندية صورًا يقل حجمها عن 20 كيلو بايت، بما في ذلك بعض مجالس التوظيف على مستوى الولاية وأنظمة التسجيل القديمة في UPSC/SSC. تحقق دائمًا من متطلبات البوابة المحددة. إذا كانت البوابة تقول "10 كيلو بايت إلى 20 كيلو بايت"، فاستخدم الإعداد المسبق 20 كيلو بايت في هذه الأداة.</div>
       </div>
       <div class="faq-item">
-        <div class="faq-q">Will a 20KB image be too blurry to use?</div>
-        <div class="faq-a">At 20KB, image quality will be noticeably reduced compared to larger sizes, but the image will still be usable for identity verification purposes. For best results, start with a photo that is already cropped to the required dimensions (e.g., 200×230px for most Indian government forms). A smaller canvas requires less data to represent, so quality is better preserved.</div>
+        <div class="faq-q">هل ستكون الصورة بحجم 20 كيلو بايت ضبابية جدًا بحيث لا يمكن استخدامها؟</div>
+        <div class="faq-a">عند حجم 20 كيلو بايت، ستنخفض جودة الصورة بشكل ملحوظ مقارنة بالأحجام الأكبر، لكن الصورة ستظل قابلة للاستخدام لأغراض التحقق من الهوية. للحصول على أفضل النتائج، ابدأ بصورة تم اقتصاصها بالفعل إلى الأبعاد المطلوبة (على سبيل المثال، 200 × 230 بكسل لمعظم النماذج الحكومية الهندية). تتطلب اللوحة الأصغر حجمًا بيانات أقل لتمثيلها، لذلك يتم الحفاظ على الجودة بشكل أفضل.</div>
       </div>
       <div class="faq-item">
-        <div class="faq-q">Is my image uploaded to a server when compressing to 20KB?</div>
-        <div class="faq-a">No. All processing happens entirely inside your web browser using the HTML5 Canvas API. Your images are never sent to any server, never stored anywhere, and never seen by anyone other than you.</div>
+        <div class="faq-q">هل يتم تحميل صورتي إلى الخادم عند ضغطها إلى 20 كيلو بايت؟</div>
+        <div class="faq-a">لا، تتم جميع عمليات المعالجة بالكامل داخل متصفح الويب الخاص بك باستخدام HTML5 Canvas API. لا يتم إرسال صورك أبدًا إلى أي خادم، ولا يتم تخزينها في أي مكان، ولا يراها أي شخص آخر غيرك.</div>
       </div>
       <div class="faq-item">
-        <div class="faq-q">How do I compress a signature image to 20KB?</div>
-        <div class="faq-a">Upload your scanned signature image to this tool with the 20 KB preset selected. For signature images, make sure the image is already cropped tightly around the signature (no large white borders) before uploading. This gives the compressor more quality budget for the actual signature strokes.</div>
+        <div class="faq-q">كيف أقوم بضغط صورة التوقيع إلى 20 كيلو بايت؟</div>
+        <div class="faq-a">قم بتحميل صورة التوقيع الممسوحة ضوئيًا إلى هذه الأداة مع تحديد الإعداد المسبق بحجم 20 كيلو بايت. بالنسبة لصور التوقيع، تأكد من اقتصاص الصورة بإحكام حول التوقيع (بدون حدود بيضاء كبيرة) قبل التحميل. وهذا يمنح الضاغط ميزانية أكثر جودة لضربات التوقيع الفعلية.</div>
       </div>
       <div class="faq-item">
-        <div class="faq-q">Can I compress multiple images to 20KB at once?</div>
-        <div class="faq-a">Yes! You can select up to 20 images at once. All of them will be compressed to 20KB simultaneously. Download them individually or all at once.</div>
+        <div class="faq-q">هل يمكنني ضغط عدة صور بحجم 20 كيلو بايت مرة واحدة؟</div>
+        <div class="faq-a">نعم! يمكنك اختيار ما يصل إلى 20 صورة في وقت واحد. سيتم ضغطها جميعًا إلى 20 كيلو بايت في وقت واحد. قم بتنزيلها بشكل فردي أو كلها مرة واحدة.</div>
       </div>
     </div>
   </div>
 
   <div class="section">
-    <h2>Compressing Signature Images to 20KB</h2>
+    <h2>ضغط صور التوقيع إلى 20 كيلو بايت</h2>
     <p>Many Indian government exam portals require your <strong>signature image</strong> to be under 20KB — often even stricter than the photo requirement. Here's what you need to know:</p>
     <table class="size-table">
       <thead><tr><th>Exam / Portal</th><th>Signature Size Limit</th><th>Signature Dimensions</th></tr></thead>
@@ -338,15 +358,15 @@
         <tr><td>State PSC Portals</td><td>10 KB – 20 KB</td><td>140 × 60 px</td></tr>
       </tbody>
     </table>
-    <h3>How to Prepare Your Signature for Upload</h3>
-    <p>Sign on plain white paper with a black or dark blue pen. Scan or photograph the signature, then crop tightly so there is minimal white space around the signature strokes. A tightly cropped signature image at 140×60px compresses to under 20KB very easily while remaining sharp and legible. Upload the cropped image to this tool with the 20 KB preset and download the result.</p>
-    <h3>Why Signature Images Compress Better Than Photos</h3>
-    <p>Signature images are mostly white background with thin dark strokes — this is one of the most compressible types of image content for JPEG. Unlike a face photo, a signature at 20KB will look nearly identical to the original because there is very little complex detail to preserve. You can safely use the 20KB preset without worrying about quality loss.</p>
+    <h3>كيفية تحضير توقيعك للتحميل</h3>
+    <p>قم بالتوقيع على ورق أبيض عادي بقلم أسود أو أزرق داكن. قم بمسح التوقيع ضوئيًا أو تصويره، ثم قم بقصه بإحكام حتى يكون هناك حد أدنى من المساحة البيضاء حول حدود التوقيع. يتم ضغط صورة التوقيع التي تم اقتصاصها بإحكام بحجم 140 × 60 بكسل إلى أقل من 20 كيلو بايت بسهولة شديدة بينما تظل واضحة ومقروءة. قم بتحميل الصورة التي تم اقتصاصها إلى هذه الأداة باستخدام الإعداد المسبق بحجم 20 كيلو بايت وقم بتنزيل النتيجة.</p>
+    <h3>لماذا يتم ضغط الصور المميزة بشكل أفضل من الصور؟</h3>
+    <p>تكون صور التوقيع في الغالب ذات خلفية بيضاء مع حدود داكنة رفيعة - وهذا أحد أكثر أنواع محتوى الصور القابلة للضغط بالنسبة إلى JPEG. على عكس صورة الوجه، سيبدو التوقيع بحجم 20 كيلو بايت مطابقًا تقريبًا للأصل نظرًا لوجود القليل جدًا من التفاصيل المعقدة التي يجب الحفاظ عليها. يمكنك استخدام الإعداد المسبق البالغ 20 كيلو بايت بأمان دون القلق بشأن فقدان الجودة.</p>
   </div>
 
   <div class="section">
-    <h2>Other Target Sizes</h2>
-    <p>Need a different file size? Choose from our dedicated tools for the most popular targets:</p>
+    <h2>أحجام الأهداف الأخرى</h2>
+    <p>هل تحتاج إلى حجم ملف مختلف؟ اختر من أدواتنا المخصصة للأهداف الأكثر شيوعًا:</p>
     <div class="tools-nav">
       <a class="tool-link" href="/ar/compress-image-to-50kb/"><span class="tl-icon">🪪</span><span>50 KB</span><span class="tl-sub">Passport photos</span></a>
       <a class="tool-link" href="/ar/compress-image-to-100kb/"><span class="tl-icon">📄</span><span>100 KB</span><span class="tl-sub">Most popular</span></a>

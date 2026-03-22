@@ -188,7 +188,7 @@
 
 <div class="hero">
   <h1>ऑनलाइन मुफ़्त <span>JPEG को 200KB</span> में कंप्रेस करें</h1>
-  <p>Reduce any JPG photo to exactly 200KB — instantly, in your browser. No server upload, no registration, 100% private.</p>
+  <p>अपने ब्राउज़र में किसी भी JPG फ़ोटो को तुरंत 200KB तक कम करें। कोई सर्वर अपलोड नहीं, कोई पंजीकरण नहीं, 100% निजी।</p>
   <div class="badges">
     <span class="badge">✓ Free Forever</span>
     <span class="badge">✓ सर्वर अपलोड नहीं</span>
@@ -214,8 +214,8 @@
   </div>
   <div class="dropzone" id="dropzone">
     <div class="dropzone-icon">🖼️</div>
-    <h3>Drop your images here</h3>
-    <p>Supports JPG, PNG, WEBP · Up to 20 images at once</p>
+    <h3>अपनी छवियाँ यहाँ छोड़ें</h3>
+    <p>JPG, PNG, WEBP को सपोर्ट करता है · एक बार में 20 छवियों तक</p>
     <button class="btn-select" onclick="document.getElementById('fileInput').click()">
       📁 Select Images
     </button>
@@ -228,26 +228,26 @@
 <div class="content-wrap">
 
   <div class="section">
-    <h2>How to Compress a JPEG to 200KB</h2>
+    <h2>JPEG को 200KB तक कैसे कंप्रेस करें</h2>
     <div class="steps">
       <div class="step">
         <div class="step-num">1</div>
         <div class="step-body">
-          <h4>Select 200 KB as your target size</h4>
-          <p>The 200 KB preset is selected by default. This is the most common upload limit for JPEG photos on government portals, job applications, and social platforms.</p>
+          <h4>अपने लक्ष्य आकार के रूप में 200 KB चुनें</h4>
+          <p>200 KB प्रीसेट डिफ़ॉल्ट रूप से चयनित है। यह सरकारी पोर्टलों, नौकरी अनुप्रयोगों और सामाजिक प्लेटफार्मों पर JPEG फ़ोटो के लिए सबसे आम अपलोड सीमा है।</p>
         </div>
       </div>
       <div class="step">
         <div class="step-num">2</div>
         <div class="step-body">
-          <h4>Upload your image</h4>
+          <h4>अपनी छवि अपलोड करें</h4>
           <p>Click <strong>Select Images</strong> or drag and drop your JPG, PNG or WEBP file. Compression starts automatically — no waiting, no server upload.</p>
         </div>
       </div>
       <div class="step">
         <div class="step-num">3</div>
         <div class="step-body">
-          <h4>Download the compressed file</h4>
+          <h4>संपीड़ित फ़ाइल डाउनलोड करें</h4>
           <p>Your compressed image appears instantly with a before/after size comparison. Click <strong>Download</strong> to save it.</p>
         </div>
       </div>
@@ -255,41 +255,41 @@
   </div>
 
   <div class="section">
-    <h2>About JPEG Compression to 200KB</h2>
+    <h2>200KB तक JPEG कम्प्रेशन के बारे में</h2>
     <p>JPEG (Joint Photographic Experts Group) is the world's most widely used image format for photographs. It achieves small file sizes through <strong>lossy compression</strong> — a process that permanently removes some image data that the human eye is least likely to notice. When you compress a JPEG to 200KB, our tool uses a binary search algorithm to find the highest possible quality level that still produces a file at or below your target.</p>
 
-    <h3>How JPEG Quality Levels Work</h3>
+    <h3>JPEG गुणवत्ता स्तर कैसे काम करते हैं</h3>
     <p>JPEG quality is typically expressed as a value from 1 to 100 (or 0.01 to 0.99 in the browser Canvas API). At quality 95, a photo looks nearly identical to the original but may be 3–5× larger than at quality 70. Our binary search starts at quality 0.5, checks the resulting file size, then moves up or down by half the remaining range — converging on the optimal quality in just 10–15 iterations. This guarantees you get the <em>highest possible quality</em> that fits within 200KB.</p>
 
-    <h3>JPEG vs PNG: Which Should You Use?</h3>
-    <p>JPEG is ideal for photographs, portraits, and images with gradients — it achieves 5–10× smaller files than PNG for the same visual quality. PNG is better for screenshots, logos, diagrams, and images with sharp edges or text, because PNG uses lossless compression that preserves every pixel exactly. If you upload a PNG to this tool, it will be converted to JPEG for compression — which is usually fine for photos but may introduce artifacts on text or line art.</p>
+    <h3>जेपीईजी बनाम पीएनजी: आपको किसका उपयोग करना चाहिए?</h3>
+    <p>JPEG तस्वीरों, पोर्ट्रेट और ग्रेडिएंट वाली छवियों के लिए आदर्श है - यह समान दृश्य गुणवत्ता के लिए PNG की तुलना में 5-10× छोटी फ़ाइलें प्राप्त करता है। पीएनजी स्क्रीनशॉट, लोगो, आरेख और तेज किनारों या टेक्स्ट वाली छवियों के लिए बेहतर है, क्योंकि पीएनजी दोषरहित संपीड़न का उपयोग करता है जो प्रत्येक पिक्सेल को सटीक रूप से संरक्षित करता है। यदि आप इस टूल पर पीएनजी अपलोड करते हैं, तो इसे संपीड़न के लिए जेपीईजी में परिवर्तित कर दिया जाएगा - जो आमतौर पर तस्वीरों के लिए ठीक है लेकिन टेक्स्ट या लाइन आर्ट पर कलाकृतियां पेश कर सकता है।</p>
 
-    <h3>JPEG EXIF Data and Metadata</h3>
-    <p>When our tool re-encodes your JPEG using the Canvas API, EXIF metadata (camera model, GPS location, shooting date) is stripped from the output. This is actually a privacy benefit — your compressed file won't contain location data or device information. If you need to preserve EXIF data, consider using a desktop tool like Lightroom or ImageMagick instead.</p>
+    <h3>JPEG EXIF ​​डेटा और मेटाडेटा</h3>
+    <p>जब हमारा टूल कैनवास एपीआई का उपयोग करके आपके जेपीईजी को फिर से एनकोड करता है, तो EXIF ​​मेटाडेटा (कैमरा मॉडल, जीपीएस स्थान, शूटिंग की तारीख) आउटपुट से हटा दिया जाता है। यह वास्तव में एक गोपनीयता लाभ है - आपकी संपीड़ित फ़ाइल में स्थान डेटा या डिवाइस जानकारी नहीं होगी। यदि आपको EXIF ​​डेटा को संरक्षित करने की आवश्यकता है, तो इसके बजाय लाइटरूम या इमेजमैजिक जैसे डेस्कटॉप टूल का उपयोग करने पर विचार करें।</p>
 
-    <h3>Common 200KB JPEG Use Cases</h3>
-    <p>The 200KB limit is enforced by Indian government exam portals (UPSC, SSC, IBPS), university admission systems, bank KYC forms, job application platforms, and many social media profile picture uploaders. A well-compressed 200KB JPEG at 600×800 pixels typically achieves quality 70–80, which is visually excellent for identity documents and profile photos.</p>
+    <h3>सामान्य 200KB JPEG उपयोग के मामले</h3>
+    <p>200KB की सीमा भारत सरकार के परीक्षा पोर्टल (यूपीएससी, एसएससी, आईबीपीएस), विश्वविद्यालय प्रवेश प्रणाली, बैंक केवाईसी फॉर्म, नौकरी आवेदन प्लेटफॉर्म और कई सोशल मीडिया प्रोफ़ाइल चित्र अपलोडर्स द्वारा लागू की जाती है। 600×800 पिक्सल पर एक अच्छी तरह से संपीड़ित 200KB JPEG आमतौर पर 70-80 गुणवत्ता प्राप्त करता है, जो पहचान दस्तावेजों और प्रोफ़ाइल फ़ोटो के लिए दृष्टि से उत्कृष्ट है।</p>
 
-    <h3>Privacy &amp; Security</h3>
-    <p>All compression happens inside your browser using the HTML5 Canvas API. Your JPEG files are never sent to any server, never stored, and never seen by anyone other than you. This is especially important for sensitive documents like passport photos, ID scans, and bank documents.</p>
+    <h3>गोपनीयता एवं amp; सुरक्षा</h3>
+    <p>सभी संपीड़न आपके ब्राउज़र के अंदर HTML5 कैनवस एपीआई का उपयोग करके होता है। आपकी JPEG फ़ाइलें कभी भी किसी सर्वर पर नहीं भेजी जातीं, कभी संग्रहीत नहीं की जातीं, और आपके अलावा किसी अन्य द्वारा कभी नहीं देखी जातीं। यह पासपोर्ट फोटो, आईडी स्कैन और बैंक दस्तावेजों जैसे संवेदनशील दस्तावेजों के लिए विशेष रूप से महत्वपूर्ण है।</p>
   </div>
 
   <div class="section">
-    <h2>Frequently Asked Questions</h2>
+    <h2>अक्सर पूछे जाने वाले प्रश्नों</h2>
     <div class="faq">
-      <div class="faq-item"><div class="faq-q">How do I compress a JPEG to exactly 200KB?</div><div class="faq-a">Upload your JPEG file to this tool with the 200 KB preset selected (it's the default). The tool automatically finds the highest quality that produces a file at or below 200KB using a binary search algorithm.</div></div>
-      <div class="faq-item"><div class="faq-q">Will compressing a JPEG to 200KB reduce quality?</div><div class="faq-a">Yes, some quality reduction is inevitable when compressing to a specific file size. However, our algorithm finds the highest possible quality that still meets your 200KB target, minimizing quality loss. For most use cases like form uploads and profile pictures, the result is visually excellent.</div></div>
-      <div class="faq-item"><div class="faq-q">Is my JPEG uploaded to a server?</div><div class="faq-a">No. All processing happens entirely inside your web browser using the HTML5 Canvas API. Your JPEG files are never sent to any server, never stored anywhere, and never seen by anyone other than you.</div></div>
-      <div class="faq-item"><div class="faq-q">What is the output format?</div><div class="faq-a">The output is always a JPEG (.jpg) file. If you upload a PNG or WEBP, it will be converted to JPEG for compression. JPEG provides the best compression ratio for photographs.</div></div>
-      <div class="faq-item"><div class="faq-q">Does JPEG compression remove EXIF metadata?</div><div class="faq-a">Yes. When our tool re-encodes your JPEG using the browser Canvas API, EXIF metadata (GPS location, camera model, shooting date) is stripped from the output. This is a privacy benefit — your compressed file won't contain personal location data.</div></div>
-      <div class="faq-item"><div class="faq-q">What JPEG quality level does the tool use?</div><div class="faq-a">The tool doesn't use a fixed quality level. Instead, it uses a binary search algorithm to find the highest quality that produces a file at or below your target size. For a 200KB target, most photos end up at quality 65–85 depending on image complexity and dimensions.</div></div>
-      <div class="faq-item"><div class="faq-q">Can I compress a JPEG to exactly 200KB (not under)?</div><div class="faq-a">The tool targets at or below 200KB. Due to how JPEG encoding works, hitting exactly 200.0KB is not reliably achievable. The output will be as close to 200KB as possible while staying under the limit — typically within 1–5KB of the target.</div></div>
+      <div class="faq-item"><div class="faq-q">मैं JPEG को बिल्कुल 200KB तक कैसे संपीड़ित कर सकता हूँ?</div><div class="faq-a">अपनी JPEG फ़ाइल को चयनित 200 KB प्रीसेट के साथ इस टूल पर अपलोड करें (यह डिफ़ॉल्ट है)। टूल स्वचालित रूप से उच्चतम गुणवत्ता ढूंढता है जो बाइनरी सर्च एल्गोरिदम का उपयोग करके 200KB या उससे कम की फ़ाइल तैयार करता है।</div></div>
+      <div class="faq-item"><div class="faq-q">क्या JPEG को 200KB तक संपीड़ित करने से गुणवत्ता कम हो जाएगी?</div><div class="faq-a">हां, किसी विशिष्ट फ़ाइल आकार में संपीड़ित करते समय कुछ गुणवत्ता में कमी अपरिहार्य है। हालाँकि, हमारा एल्गोरिदम उच्चतम संभव गुणवत्ता ढूंढता है जो अभी भी आपके 200KB लक्ष्य को पूरा करता है, जिससे गुणवत्ता हानि कम हो जाती है। फ़ॉर्म अपलोड और प्रोफ़ाइल चित्र जैसे अधिकांश उपयोग मामलों के लिए, परिणाम दृष्टिगत रूप से उत्कृष्ट है।</div></div>
+      <div class="faq-item"><div class="faq-q">क्या मेरा JPEG किसी सर्वर पर अपलोड है?</div><div class="faq-a">नहीं, सभी प्रोसेसिंग HTML5 कैनवस एपीआई का उपयोग करके पूरी तरह से आपके वेब ब्राउज़र के अंदर होती है। आपकी JPEG फ़ाइलें कभी भी किसी सर्वर पर नहीं भेजी जातीं, कभी भी कहीं संग्रहीत नहीं की जातीं, और आपके अलावा किसी अन्य द्वारा कभी नहीं देखी जातीं।</div></div>
+      <div class="faq-item"><div class="faq-q">आउटपुट स्वरूप क्या है?</div><div class="faq-a">आउटपुट हमेशा JPEG (.jpg) फ़ाइल होता है। यदि आप PNG या WEBP अपलोड करते हैं, तो इसे संपीड़न के लिए JPEG में परिवर्तित कर दिया जाएगा। JPEG तस्वीरों के लिए सर्वोत्तम संपीड़न अनुपात प्रदान करता है।</div></div>
+      <div class="faq-item"><div class="faq-q">क्या JPEG संपीड़न EXIF ​​मेटाडेटा को हटा देता है?</div><div class="faq-a">हाँ। जब हमारा टूल ब्राउज़र कैनवास एपीआई का उपयोग करके आपके जेपीईजी को फिर से एनकोड करता है, तो EXIF ​​मेटाडेटा (जीपीएस स्थान, कैमरा मॉडल, शूटिंग तिथि) आउटपुट से हटा दिया जाता है। यह एक गोपनीयता लाभ है - आपकी संपीड़ित फ़ाइल में व्यक्तिगत स्थान डेटा नहीं होगा।</div></div>
+      <div class="faq-item"><div class="faq-q">उपकरण किस JPEG गुणवत्ता स्तर का उपयोग करता है?</div><div class="faq-a">उपकरण किसी निश्चित गुणवत्ता स्तर का उपयोग नहीं करता है. इसके बजाय, यह उच्चतम गुणवत्ता खोजने के लिए एक बाइनरी सर्च एल्गोरिदम का उपयोग करता है जो आपके लक्ष्य आकार पर या उससे कम फ़ाइल उत्पन्न करता है। 200KB लक्ष्य के लिए, अधिकांश तस्वीरें छवि जटिलता और आयामों के आधार पर 65-85 गुणवत्ता पर समाप्त होती हैं।</div></div>
+      <div class="faq-item"><div class="faq-q">क्या मैं JPEG को ठीक 200KB तक संपीड़ित कर सकता हूँ (इससे कम नहीं)?</div><div class="faq-a">टूल का लक्ष्य 200KB या उससे कम है। JPEG एन्कोडिंग कैसे काम करती है, इसके कारण सटीक 200.0KB तक पहुंचना विश्वसनीय रूप से संभव नहीं है। सीमा के अंतर्गत रहते हुए आउटपुट यथासंभव 200KB के करीब होगा - आमतौर पर लक्ष्य के 1-5KB के भीतर।</div></div>
     </div>
   </div>
 
   <div class="section">
-    <h2>Other Target Sizes</h2>
-    <p>Need a different file size? Choose from our dedicated tools:</p>
+    <h2>अन्य लक्ष्य आकार</h2>
+    <p>भिन्न फ़ाइल आकार की आवश्यकता है? हमारे समर्पित टूल में से चुनें:</p>
     <div class="tools-nav">
       <a class="tool-link" href="/hi/compress-image-to-20kb/"><span class="tl-icon">📋</span><span>20 KB</span><span class="tl-sub">Gov forms</span></a>
       <a class="tool-link" href="/hi/compress-image-to-50kb/"><span class="tl-icon">🪪</span><span>50 KB</span><span class="tl-sub">Passport photos</span></a>

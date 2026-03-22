@@ -191,6 +191,26 @@
       nav::-webkit-scrollbar { display: none; }
       nav a { white-space: nowrap; font-size: 12px; }
     }
+
+  /* RTL overrides for Arabic */
+  [dir="rtl"] body { direction: rtl; }
+  [dir="rtl"] .section h2,
+  [dir="rtl"] .section h3,
+  [dir="rtl"] .section p,
+  [dir="rtl"] .hero h1,
+  [dir="rtl"] .hero p { text-align: right; }
+  [dir="rtl"] .size-table th { text-align: right; }
+  [dir="rtl"] .size-table td { text-align: right; }
+  [dir="rtl"] .faq-q { flex-direction: row-reverse; }
+  [dir="rtl"] .faq-q::after { margin-left: 0; margin-right: 12px; }
+  [dir="rtl"] .step { flex-direction: row-reverse; }
+  [dir="rtl"] .step-body { text-align: right; }
+  [dir="rtl"] nav { flex-direction: row-reverse; }
+  [dir="rtl"] .result-item { flex-direction: row-reverse; }
+  [dir="rtl"] .result-info { text-align: right; }
+  [dir="rtl"] ol { padding-right: 20px; padding-left: 0; }
+  [dir="rtl"] .size-row { flex-direction: row-reverse; justify-content: flex-end; }
+  [dir="rtl"] .badges { flex-direction: row-reverse; }
   </style>
   <!-- Structured Data: BreadcrumbList -->
   <script type="application/ld+json">
@@ -232,7 +252,7 @@
 
 <div class="hero">
   <h1>ضغط الصور إلى <span>1MB</span> مجاناً عبر الإنترنت</h1>
-  <p>Reduce any JPG, PNG or WEBP photo to exactly 1MB — instantly, privately, with no server upload. Ideal for high-quality prints, professional portfolios, and large document uploads.</p>
+  <p>قم بتقليل حجم أي صورة بتنسيق JPG أو PNG أو WEBP إلى 1 ميجابايت بالضبط - على الفور، وبشكل خاص، دون الحاجة إلى التحميل على الخادم. مثالية للمطبوعات عالية الجودة والحافظات الاحترافية وتحميل المستندات الكبيرة.</p>
   <div class="badges">
     <span class="badge">✓ Free Forever</span>
     <span class="badge">✓ بدون رفع للخادم</span>
@@ -258,8 +278,8 @@
   </div>
   <div class="dropzone" id="dropzone">
     <div class="dropzone-icon">🖼️</div>
-    <h3>Drop your images here</h3>
-    <p>Supports JPG, PNG, WEBP · Up to 20 images at once</p>
+    <h3>أسقط صورك هنا</h3>
+    <p>يدعم JPG، PNG، WEBP · ما يصل إلى 20 صورة في وقت واحد</p>
     <button class="btn-select" onclick="document.getElementById('fileInput').click()">📁 Select Images</button>
     <input type="file" id="fileInput" accept="image/jpeg,image/png,image/webp" multiple />
   </div>
@@ -270,8 +290,8 @@
 <div class="content-wrap">
 
   <div class="section">
-    <h2>When Do You Need to Compress an Image to 1MB?</h2>
-    <p>1MB is a common maximum file size for high-quality image uploads. Here are the most common situations:</p>
+    <h2>متى تحتاج إلى ضغط الصورة إلى 1 ميجابايت؟</h2>
+    <p>1 ميغابايت هو الحد الأقصى الشائع لحجم الملف لتحميلات الصور عالية الجودة. فيما يلي الحالات الأكثر شيوعًا:</p>
     <table class="size-table">
       <thead><tr><th>Use Case</th><th>Typical Size Limit</th><th>Recommended Target</th></tr></thead>
       <tbody>
@@ -283,53 +303,53 @@
         <tr><td>Photography contest submission</td><td>1–5 MB</td><td>1 MB</td></tr>
       </tbody>
     </table>
-    <h3>Why 1MB is the Sweet Spot for High-Quality Images</h3>
+    <h3>لماذا يعتبر 1 ميجابايت هو المكان الأمثل للحصول على صور عالية الجودة</h3>
     <p>1MB allows for excellent image quality while keeping file sizes manageable. A 1MB JPEG at 2000×1500px typically achieves a quality level of 85–92%, which is considered 'visually lossless' for most purposes. According to <a href='https://developers.google.com/speed/webp/docs/compression' target='_blank' rel='noopener'>Google's compression research</a>, JPEG quality above 85 produces results that are difficult to distinguish from the original even under close inspection.</p>
   </div>
 
 
     <div class="section">
-      <h2>When to Use 1MB vs Smaller Sizes</h2>
-      <p>Choosing the right compression target depends on how the image will be used:</p>
-      <h3>Use 1MB when quality is the priority</h3>
-      <p>For professional portfolios, product photography, real estate listings, and any situation where the image will be viewed at full size or printed, 1MB gives you the best quality while still meeting most upload limits.</p>
-      <h3>Use 500KB for general web use</h3>
+      <h2>متى يتم استخدام 1 ميجابايت مقابل الأحجام الأصغر</h2>
+      <p>يعتمد اختيار هدف الضغط الصحيح على كيفية استخدام الصورة:</p>
+      <h3>استخدم 1 ميجابايت عندما تكون الجودة هي الأولوية</h3>
+      <p>بالنسبة للحافظات الاحترافية، وتصوير المنتجات، وقوائم العقارات، وأي موقف سيتم فيه عرض الصورة بالحجم الكامل أو المطبوعة، فإن 1 ميجابايت تمنحك أفضل جودة مع الاستمرار في تلبية معظم حدود التحميل.</p>
+      <h3>استخدم 500 كيلو بايت للاستخدام العام للويب</h3>
       <p>For blog posts, social media, and email attachments, <a href="/ar/compress-image-to-500kb/">500KB</a> is usually sufficient and loads faster on mobile connections.</p>
-      <h3>Use 200KB for fast-loading web pages</h3>
+      <h3>استخدم 200 كيلو بايت لصفحات الويب سريعة التحميل</h3>
       <p>For thumbnails, hero images, and pages where load speed is critical, our <a href="/ar/">200KB compressor</a> is the right choice.</p>
     </div>
 
   <div class="section">
-    <h2>Frequently Asked Questions</h2>
+    <h2>الأسئلة المتداولة</h2>
     <div class="faq">
       <div class="faq-item">
-        <div class="faq-q">Why would I need to compress an image to exactly 1MB?</div>
-        <div class="faq-a">Some platforms and portals have a maximum file size of 1MB for uploads. This includes certain job application portals, document submission systems, and content management platforms. Compressing to 1MB ensures your image meets the limit while retaining the highest possible quality.</div>
+        <div class="faq-q">لماذا أحتاج إلى ضغط صورة بحجم 1 ميجابايت بالضبط؟</div>
+        <div class="faq-a">يبلغ الحد الأقصى لحجم الملف للتحميل في بعض الأنظمة الأساسية والبوابات 1 ميغابايت. يتضمن ذلك بعض بوابات طلبات الوظائف وأنظمة تقديم المستندات ومنصات إدارة المحتوى. يضمن الضغط إلى 1 ميجابايت أن تصل صورتك إلى الحد الأقصى مع الاحتفاظ بأعلى جودة ممكنة.</div>
       </div>
       <div class="faq-item">
-        <div class="faq-q">Does compressing to 1MB reduce image quality?</div>
-        <div class="faq-a">For most photos taken with modern smartphones or cameras, compressing to 1MB produces results that are visually identical to the original. Only very high-resolution images (20MP+) or RAW files will show any quality difference. Our binary-search algorithm finds the highest JPEG quality that still fits within 1MB.</div>
+        <div class="faq-q">هل الضغط إلى 1 ميجا بايت يقلل من جودة الصورة؟</div>
+        <div class="faq-a">بالنسبة لمعظم الصور الملتقطة بالهواتف الذكية أو الكاميرات الحديثة، يؤدي ضغطها إلى 1 ميجابايت إلى الحصول على نتائج مطابقة بصريًا للصورة الأصلية. فقط الصور عالية الدقة (20 ميجابكسل +) أو ملفات RAW هي التي ستظهر أي اختلاف في الجودة. تعثر خوارزمية البحث الثنائي الخاصة بنا على أعلى جودة بتنسيق JPEG والتي لا تزال تتلاءم مع حجم 1 ميجابايت.</div>
       </div>
       <div class="faq-item">
-        <div class="faq-q">Is my image uploaded to a server when compressing to 1MB?</div>
-        <div class="faq-a">No. All processing happens entirely inside your web browser using the HTML5 Canvas API. Your images are never sent to any server, never stored anywhere, and never seen by anyone other than you.</div>
+        <div class="faq-q">هل يتم تحميل صورتي إلى الخادم عند ضغطها إلى 1 ميجابايت؟</div>
+        <div class="faq-a">لا، تتم جميع عمليات المعالجة بالكامل داخل متصفح الويب الخاص بك باستخدام HTML5 Canvas API. لا يتم إرسال صورك أبدًا إلى أي خادم، ولا يتم تخزينها في أي مكان، ولا يراها أي شخص آخر غيرك.</div>
       </div>
       <div class="faq-item">
-        <div class="faq-q">Can I compress multiple images to 1MB at once?</div>
-        <div class="faq-a">Yes! You can select up to 20 images at once. All of them will be compressed to 1MB simultaneously. Download them individually or all at once.</div>
+        <div class="faq-q">هل يمكنني ضغط عدة صور بحجم 1 ميجابايت مرة واحدة؟</div>
+        <div class="faq-a">نعم! يمكنك اختيار ما يصل إلى 20 صورة في وقت واحد. سيتم ضغطها جميعًا إلى 1 ميجابايت في وقت واحد. قم بتنزيلها بشكل فردي أو كلها مرة واحدة.</div>
       </div>
       <div class="faq-item">
-        <div class="faq-q">What is the difference between compressing to 1MB vs 500KB?</div>
-        <div class="faq-a">At 1MB, images retain more detail and higher quality than at 500KB. For professional use cases like portfolio photos, product photography, or images that will be printed, 1MB is the better choice. For web use and email, 500KB is usually sufficient and loads faster.</div>
+        <div class="faq-q">ما الفرق بين الضغط إلى 1 ميجابايت مقابل 500 كيلو بايت؟</div>
+        <div class="faq-a">عند حجم 1 ميجا بايت، تحتفظ الصور بمزيد من التفاصيل وجودة أعلى من 500 كيلو بايت. بالنسبة لحالات الاستخدام الاحترافي مثل صور المحفظة أو تصوير المنتجات أو الصور التي سيتم طباعتها، فإن 1 ميجابايت هو الخيار الأفضل. For web use and email, 500KB is usually sufficient and loads faster.</div>
       </div>
     </div>
   </div>
 
   <div class="section">
-    <h2>1MB for Photography, Printing &amp; Professional Portfolios</h2>
-    <p>1MB is the minimum recommended file size for images that will be printed or displayed at large sizes. Here's a practical guide for professional use cases.</p>
-    <h3>Print Quality at 1MB</h3>
-    <p>For standard print sizes, here's what 1MB can deliver:</p>
+    <h2>1 ميجا بايت للتصوير والطباعة والتصوير المحافظ المهنية</h2>
+    <p>1 ميغابايت هو الحد الأدنى لحجم الملف الموصى به للصور التي سيتم طباعتها أو عرضها بأحجام كبيرة. فيما يلي دليل عملي لحالات الاستخدام الاحترافي.</p>
+    <h3>جودة الطباعة 1 ميجا بايت</h3>
+    <p>بالنسبة لأحجام الطباعة القياسية، إليك ما يمكن أن يقدمه 1 ميجابايت:</p>
     <table class="size-table">
       <thead><tr><th>Print Size</th><th>Required Resolution</th><th>1MB Quality</th></tr></thead>
       <tbody>
@@ -339,15 +359,15 @@
         <tr><td>A4 (8.3 × 11.7 inch)</td><td>2480 × 3508 px at 300 DPI</td><td>Acceptable for most uses</td></tr>
       </tbody>
     </table>
-    <h3>Photography Contest &amp; Stock Photo Submissions</h3>
-    <p>Many photography contests and stock photo platforms (Shutterstock, Adobe Stock, Getty Images) require a minimum file size of 1–4MB for submissions. Compressing to exactly 1MB is useful when you need to meet a maximum file size limit while keeping quality as high as possible.</p>
-    <h3>Real Estate &amp; Architecture Photography</h3>
-    <p>Real estate listing photos are typically displayed at 800–1200px wide on property portals. At 1MB, a 1200×800px photo achieves JPEG quality of 88–95%, which is sufficient for showing property details clearly. Most real estate portals (Zillow, Rightmove, MagicBricks) accept images up to 5–10MB, so 1MB gives you a good balance of quality and upload speed.</p>
+    <h3>مسابقة التصوير الفوتوغرافي &amp; تقديمات الصور الفوتوغرافية</h3>
+    <p>تتطلب العديد من مسابقات التصوير الفوتوغرافي ومنصات الصور المخزنة (Shutterstock وAdobe Stock وGetty Images) حدًا أدنى لحجم الملف يصل إلى 1–4 ميجابايت لعمليات الإرسال. يعد الضغط إلى 1 ميجا بايت بالضبط مفيدًا عندما تحتاج إلى تلبية الحد الأقصى لحجم الملف مع الحفاظ على الجودة بأعلى مستوى ممكن.</p>
+    <h3>العقارات &amp; التصوير المعماري</h3>
+    <p>عادةً ما يتم عرض صور قوائم العقارات بعرض 800-1200 بكسل على بوابات العقارات. عند حجم 1 ميجابايت، تحقق الصورة مقاس 1200 × 800 بكسل جودة JPEG بنسبة 88-95%، وهو ما يكفي لإظهار تفاصيل الملكية بوضوح. تقبل معظم البوابات العقارية (Zillow وRightmove وMagicBricks) صورًا يصل حجمها إلى 5-10 ميجابايت، لذا فإن 1 ميجابايت تمنحك توازنًا جيدًا بين الجودة وسرعة التحميل.</p>
   </div>
 
   <div class="section">
-    <h2>Other Target Sizes</h2>
-    <p>Need a different file size? Choose from our dedicated tools for the most popular targets:</p>
+    <h2>أحجام الأهداف الأخرى</h2>
+    <p>هل تحتاج إلى حجم ملف مختلف؟ اختر من أدواتنا المخصصة للأهداف الأكثر شيوعًا:</p>
     <div class="tools-nav">
       <a class="tool-link" href="/ar/compress-image-to-20kb/"><span class="tl-icon">📋</span><span>20 KB</span><span class="tl-sub">Strict gov forms</span></a>
       <a class="tool-link" href="/ar/compress-image-to-50kb/"><span class="tl-icon">🪪</span><span>50 KB</span><span class="tl-sub">Passport photos</span></a>

@@ -191,6 +191,26 @@
       nav::-webkit-scrollbar { display: none; }
       nav a { white-space: nowrap; font-size: 12px; }
     }
+
+  /* RTL overrides for Arabic */
+  [dir="rtl"] body { direction: rtl; }
+  [dir="rtl"] .section h2,
+  [dir="rtl"] .section h3,
+  [dir="rtl"] .section p,
+  [dir="rtl"] .hero h1,
+  [dir="rtl"] .hero p { text-align: right; }
+  [dir="rtl"] .size-table th { text-align: right; }
+  [dir="rtl"] .size-table td { text-align: right; }
+  [dir="rtl"] .faq-q { flex-direction: row-reverse; }
+  [dir="rtl"] .faq-q::after { margin-left: 0; margin-right: 12px; }
+  [dir="rtl"] .step { flex-direction: row-reverse; }
+  [dir="rtl"] .step-body { text-align: right; }
+  [dir="rtl"] nav { flex-direction: row-reverse; }
+  [dir="rtl"] .result-item { flex-direction: row-reverse; }
+  [dir="rtl"] .result-info { text-align: right; }
+  [dir="rtl"] ol { padding-right: 20px; padding-left: 0; }
+  [dir="rtl"] .size-row { flex-direction: row-reverse; justify-content: flex-end; }
+  [dir="rtl"] .badges { flex-direction: row-reverse; }
   </style>
   <!-- Structured Data: BreadcrumbList -->
   <script type="application/ld+json">
@@ -232,7 +252,7 @@
 
 <div class="hero">
   <h1>ضغط الصور إلى <span>500KB</span> مجاناً عبر الإنترنت</h1>
-  <p>Reduce any JPG, PNG or WEBP photo to exactly 500KB — instantly, privately, with no server upload. Perfect for email attachments, job applications, and high-quality web images.</p>
+  <p>قم بتقليل حجم أي صورة بتنسيق JPG أو PNG أو WEBP إلى 500 كيلو بايت بالضبط - على الفور، وبشكل خاص، دون الحاجة إلى التحميل على الخادم. مثالي لمرفقات البريد الإلكتروني وطلبات العمل وصور الويب عالية الجودة.</p>
   <div class="badges">
     <span class="badge">✓ Free Forever</span>
     <span class="badge">✓ بدون رفع للخادم</span>
@@ -258,8 +278,8 @@
   </div>
   <div class="dropzone" id="dropzone">
     <div class="dropzone-icon">🖼️</div>
-    <h3>Drop your images here</h3>
-    <p>Supports JPG, PNG, WEBP · Up to 20 images at once</p>
+    <h3>أسقط صورك هنا</h3>
+    <p>يدعم JPG، PNG، WEBP · ما يصل إلى 20 صورة في وقت واحد</p>
     <button class="btn-select" onclick="document.getElementById('fileInput').click()">📁 Select Images</button>
     <input type="file" id="fileInput" accept="image/jpeg,image/png,image/webp" multiple />
   </div>
@@ -270,8 +290,8 @@
 <div class="content-wrap">
 
   <div class="section">
-    <h2>When Do You Need to Compress an Image to 500KB?</h2>
-    <p>500KB strikes a balance between good image quality and manageable file size. Here are the most common use cases:</p>
+    <h2>متى تحتاج إلى ضغط الصورة إلى 500 كيلو بايت؟</h2>
+    <p>500 كيلو بايت تحقق التوازن بين جودة الصورة الجيدة وحجم الملف الذي يمكن التحكم فيه. فيما يلي حالات الاستخدام الأكثر شيوعًا:</p>
     <table class="size-table">
       <thead><tr><th>Use Case</th><th>Typical Size Limit</th><th>Recommended Target</th></tr></thead>
       <tbody>
@@ -283,66 +303,66 @@
         <tr><td>Online portfolio image</td><td>No strict limit</td><td>500 KB</td></tr>
       </tbody>
     </table>
-    <h3>Why 500KB is a Good Default for Web Images</h3>
+    <h3>لماذا يعد 500 كيلو بايت خيارًا افتراضيًا جيدًا لصور الويب</h3>
     <p>500KB is widely recommended as a good target for web images because it balances visual quality with page load speed. According to <a href='https://web.dev/articles/uses-optimized-images' target='_blank' rel='noopener'>Google's web performance guidelines</a>, optimizing images is one of the highest-impact improvements you can make to page load time. A 500KB JPEG at 1200×900px typically achieves a JPEG quality of 75–85%, which is visually excellent for most purposes.</p>
   </div>
 
 
     <div class="section">
-      <h2>500KB vs Other Sizes: Which Should You Use?</h2>
-      <p>Choosing the right target size depends on your use case:</p>
-      <h3>Use 500KB for:</h3>
-      <p>Email attachments, job application uploads, LinkedIn photos, blog images, and e-commerce product photos. At 500KB, quality is excellent and file sizes are manageable.</p>
-      <h3>Use 200KB for:</h3>
+      <h2>500 كيلو بايت مقابل الأحجام الأخرى: ما الذي يجب عليك استخدامه؟</h2>
+      <p>يعتمد اختيار الحجم المستهدف الصحيح على حالة الاستخدام الخاصة بك:</p>
+      <h3>استخدم 500 كيلو بايت من أجل:</h3>
+      <p>مرفقات البريد الإلكتروني، وتحميلات طلبات التوظيف، وصور LinkedIn، وصور المدونات، وصور منتجات التجارة الإلكترونية. بحجم 500 كيلو بايت، تكون الجودة ممتازة ويمكن التحكم في أحجام الملفات.</p>
+      <h3>استخدم 200 كيلو بايت من أجل:</h3>
       <p>Web thumbnails, social media images, and situations where page load speed is critical. See our <a href="/ar/">200KB compressor</a> for this use case.</p>
-      <h3>Use 100KB for:</h3>
+      <h3>استخدم 100 كيلو بايت من أجل:</h3>
       <p>Government forms, exam registrations, and portals with strict size limits. See our <a href="/ar/compress-image-to-100kb/">100KB compressor</a> for this use case.</p>
-      <h3>Use 1MB for:</h3>
+      <h3>استخدم 1 ميجابايت من أجل:</h3>
       <p>High-quality prints, professional portfolios, and situations where maximum quality is required. See our <a href="/ar/compress-image-to-1mb/">1MB compressor</a> for this use case.</p>
     </div>
 
   <div class="section">
-    <h2>Frequently Asked Questions</h2>
+    <h2>الأسئلة المتداولة</h2>
     <div class="faq">
       <div class="faq-item">
-        <div class="faq-q">What is 500KB good for?</div>
-        <div class="faq-a">500KB is ideal for email attachments, job application photo uploads, and web images where you want good quality without a huge file size. At 500KB, a typical photo (1200×900px) retains excellent visual quality — sharp details, accurate colors, and no visible compression artifacts.</div>
+        <div class="faq-q">ما فائدة 500 كيلو بايت؟</div>
+        <div class="faq-a">يعد حجم 500 كيلو بايت مثاليًا لمرفقات البريد الإلكتروني وتحميل صور طلبات العمل وصور الويب حيث تريد جودة جيدة دون حجم ملف كبير. عند حجم 500 كيلو بايت، تحتفظ الصورة النموذجية (1200 × 900 بكسل) بجودة بصرية ممتازة - تفاصيل واضحة وألوان دقيقة وبدون أي مؤثرات ضغط مرئية.</div>
       </div>
       <div class="faq-item">
-        <div class="faq-q">Does compressing to 500KB noticeably reduce quality?</div>
-        <div class="faq-a">For most photos, compressing to 500KB produces results that are visually indistinguishable from the original. Our binary-search algorithm finds the highest JPEG quality that still fits within 500KB, so you get the best possible result. Only very large original images (e.g., 20MP+ camera photos) will show any quality difference.</div>
+        <div class="faq-q">هل يؤدي الضغط إلى 500 كيلو بايت إلى تقليل الجودة بشكل ملحوظ؟</div>
+        <div class="faq-a">بالنسبة لمعظم الصور، يؤدي الضغط إلى 500 كيلو بايت إلى نتائج لا يمكن تمييزها بصريًا عن الصورة الأصلية. تعثر خوارزمية البحث الثنائي الخاصة بنا على أعلى جودة بتنسيق JPEG والتي لا تزال تتلاءم مع حجم 500 كيلو بايت، حتى تحصل على أفضل نتيجة ممكنة. الصور الأصلية الكبيرة جدًا فقط (على سبيل المثال، صور الكاميرا بدقة 20 ميجابكسل+) هي التي ستظهر أي اختلاف في الجودة.</div>
       </div>
       <div class="faq-item">
-        <div class="faq-q">Is my image uploaded to a server when compressing to 500KB?</div>
-        <div class="faq-a">No. All processing happens entirely inside your web browser using the HTML5 Canvas API. Your images are never sent to any server, never stored anywhere, and never seen by anyone other than you.</div>
+        <div class="faq-q">هل يتم تحميل صورتي إلى الخادم عند ضغطها إلى 500 كيلو بايت؟</div>
+        <div class="faq-a">لا، تتم جميع عمليات المعالجة بالكامل داخل متصفح الويب الخاص بك باستخدام HTML5 Canvas API. لا يتم إرسال صورك أبدًا إلى أي خادم، ولا يتم تخزينها في أي مكان، ولا يراها أي شخص آخر غيرك.</div>
       </div>
       <div class="faq-item">
-        <div class="faq-q">Can I compress multiple images to 500KB at once?</div>
-        <div class="faq-a">Yes! You can select up to 20 images at once. All of them will be compressed to 500KB simultaneously. Download them individually or all at once.</div>
+        <div class="faq-q">هل يمكنني ضغط عدة صور بحجم 500 كيلو بايت مرة واحدة؟</div>
+        <div class="faq-a">نعم! يمكنك اختيار ما يصل إلى 20 صورة في وقت واحد. سيتم ضغطها جميعًا إلى 500 كيلو بايت في وقت واحد. قم بتنزيلها بشكل فردي أو كلها مرة واحدة.</div>
       </div>
       <div class="faq-item">
-        <div class="faq-q">What is the difference between 500KB and 1MB compression?</div>
-        <div class="faq-a">At 500KB, images are compressed more aggressively than at 1MB, but the quality difference is usually minimal for typical web and email use. If you need to send photos via email or upload to a job portal, 500KB is usually sufficient. If you need to print the image or use it in a professional context, use the 1MB preset instead.</div>
+        <div class="faq-q">ما الفرق بين ضغط 500 كيلو بايت و1 ميجا بايت؟</div>
+        <div class="faq-a">عند حجم 500 كيلو بايت، يتم ضغط الصور بقوة أكبر من 1 ميجا بايت، ولكن فرق الجودة عادة ما يكون ضئيلًا بالنسبة للاستخدام النموذجي للويب والبريد الإلكتروني. إذا كنت بحاجة إلى إرسال الصور عبر البريد الإلكتروني أو تحميلها على بوابة الوظائف، فعادةً ما يكون حجم 500 كيلو بايت كافيًا. إذا كنت بحاجة إلى طباعة الصورة أو استخدامها في سياق احترافي، فاستخدم الإعداد المسبق بحجم 1 ميجابايت بدلاً من ذلك.</div>
       </div>
     </div>
   </div>
 
   <div class="section">
-    <h2>500KB for Email &amp; Professional Use: Platform-by-Platform Guide</h2>
-    <p>Different platforms handle image attachments differently. Here's what you need to know before sending photos via email or uploading to professional platforms.</p>
-    <h3>Email Clients</h3>
-    <p>Gmail, Outlook, and Apple Mail all support attachments up to 25MB, so 500KB is well within limits. However, many corporate email servers have stricter policies — some block attachments over 1MB or 500KB. Compressing to 500KB before sending ensures your email gets through even on restrictive corporate networks. It also means faster delivery and a better experience for the recipient on mobile.</p>
-    <h3>LinkedIn Profile &amp; Cover Photos</h3>
-    <p>LinkedIn recommends profile photos between 400×400 px and 7680×4320 px, with a maximum file size of 8MB. However, LinkedIn recompresses your photo on upload, so sending a 500KB JPEG gives you more control over the final quality than letting LinkedIn's algorithm decide. A 500KB photo at 800×800 px will look sharp on both desktop and mobile LinkedIn profiles.</p>
-    <h3>Job Application Portals</h3>
-    <p>Most corporate job application portals (Workday, Greenhouse, Lever, Taleo) accept photos up to 2–5MB, but some older HR systems cap uploads at 500KB. Compressing to 500KB ensures compatibility with all systems. For your CV/resume photo, 500KB at 400×400 px is the professional standard — high enough quality to look sharp when printed, small enough to not bloat the document.</p>
-    <h3>E-commerce Product Photos</h3>
-    <p>For platforms like Shopify, WooCommerce, and Etsy, 500KB per product image is a good target. It keeps your store loading fast (important for mobile shoppers) while maintaining enough quality for customers to see product details.</p>
+    <h2>500 كيلو بايت للبريد الإلكتروني والبريد الإلكتروني الاستخدام الاحترافي: دليل كل منصة على حدة</h2>
+    <p>تتعامل الأنظمة الأساسية المختلفة مع مرفقات الصور بشكل مختلف. إليك ما تحتاج إلى معرفته قبل إرسال الصور عبر البريد الإلكتروني أو تحميلها على منصات احترافية.</p>
+    <h3>عملاء البريد الإلكتروني</h3>
+    <p>يدعم كل من Gmail وOutlook وApple Mail مرفقات يصل حجمها إلى 25 ميجابايت، لذا فإن 500 كيلو بايت ضمن الحدود. ومع ذلك، فإن العديد من خوادم البريد الإلكتروني للشركات لديها سياسات أكثر صرامة، حيث يقوم بعضها بحظر المرفقات التي يزيد حجمها عن 1 ميجابايت أو 500 كيلو بايت. يؤدي الضغط إلى 500 كيلو بايت قبل الإرسال إلى ضمان وصول بريدك الإلكتروني حتى على شبكات الشركات المقيدة. ويعني أيضًا تسليمًا أسرع وتجربة أفضل للمستلم على الهاتف المحمول.</p>
+    <h3>الملف الشخصي على LinkedIn &amp; صور الغلاف</h3>
+    <p>توصي LinkedIn بصور الملف الشخصي التي يتراوح حجمها بين 400×400 بكسل و7680×4320 بكسل، وبحد أقصى لحجم الملف يبلغ 8 ميجابايت. ومع ذلك، يقوم LinkedIn بإعادة ضغط صورتك عند التحميل، لذا فإن إرسال ملف JPEG بحجم 500 كيلو بايت يمنحك تحكمًا أكبر في الجودة النهائية بدلاً من السماح لخوارزمية LinkedIn باتخاذ القرار. ستبدو الصورة بحجم 500 كيلو بايت بدقة 800 × 800 بكسل واضحة على الملفات الشخصية على سطح المكتب والهاتف المحمول على LinkedIn.</p>
+    <h3>بوابات التقديم للوظائف</h3>
+    <p>تقبل معظم بوابات طلبات الوظائف بالشركات (Workday، وGreenhouse، وLever، وTaleo) صورًا يصل حجمها إلى 2-5 ميجابايت، لكن بعض أنظمة الموارد البشرية الأقدم تضع حدًا أقصى للتحميل يصل إلى 500 كيلو بايت. يضمن الضغط إلى 500 كيلو بايت التوافق مع جميع الأنظمة. بالنسبة لصورة سيرتك الذاتية/سيرتك الذاتية، يعد 500 كيلو بايت بدقة 400 × 400 بكسل هو المعيار الاحترافي - جودة عالية بما يكفي لتبدو حادة عند الطباعة، وصغيرة بما يكفي لعدم تضخم المستند.</p>
+    <h3>صور منتجات التجارة الإلكترونية</h3>
+    <p>بالنسبة لمنصات مثل Shopify وWooCommerce وEtsy، يعد 500 كيلو بايت لكل صورة منتج هدفًا جيدًا. فهو يحافظ على تحميل متجرك بسرعة (مهم للمتسوقين عبر الهاتف المحمول) مع الحفاظ على الجودة الكافية للعملاء لرؤية تفاصيل المنتج.</p>
   </div>
 
   <div class="section">
-    <h2>Other Target Sizes</h2>
-    <p>Need a different file size? Choose from our dedicated tools for the most popular targets:</p>
+    <h2>أحجام الأهداف الأخرى</h2>
+    <p>هل تحتاج إلى حجم ملف مختلف؟ اختر من أدواتنا المخصصة للأهداف الأكثر شيوعًا:</p>
     <div class="tools-nav">
       <a class="tool-link" href="/ar/compress-image-to-20kb/"><span class="tl-icon">📋</span><span>20 KB</span><span class="tl-sub">Strict gov forms</span></a>
       <a class="tool-link" href="/ar/compress-image-to-50kb/"><span class="tl-icon">🪪</span><span>50 KB</span><span class="tl-sub">Passport photos</span></a>

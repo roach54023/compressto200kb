@@ -46,7 +46,7 @@
     "@type": "WebApplication",
     "name": "Compress Photo for Government Form",
     "url": "https://compressto200kb.com/compress-photo-for-government-form/",
-    "description": "Free online tool to compress photos for Indian government forms including UPSC, SSC, IBPS, NEET, JEE, RRB, GATE, CAT. Works entirely in your browser — no upload required.",
+    "description": "Gratis online tool to compress photos for Indian government forms including UPSC, SSC, IBPS, NEET, JEE, RRB, GATE, CAT. Works entirely in your browser — no upload required.",
     "applicationCategory": "UtilitiesApplication",
     "operatingSystem": "Any",
     "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
@@ -282,7 +282,7 @@
   <h1>Kompres Foto untuk <span>Formulir Pemerintah</span></h1>
   <p>Resize your photo to the exact KB required by UPSC, SSC, IBPS, NEET, JEE, RRB, GATE, CAT and all Indian government portals — instantly, in your browser.</p>
   <div class="badges">
-    <span class="badge">✓ Free Forever</span>
+    <span class="badge">✓ Gratis Forever</span>
     <span class="badge">✓ Tidak ada unggahan ke server</span>
     <span class="badge">✓ 100% Private</span>
     <span class="badge">✓ JPEG Output</span>
@@ -319,7 +319,7 @@
 
   <!-- Exam-by-exam reference -->
   <div class="section">
-    <h2>Photo Size Requirements for Every Major Indian Exam</h2>
+    <h2>Ukuran Foto Requirements for Every Major Indian Exam</h2>
     <p>Click any exam button in the bar above to automatically set the correct target size. Or use this reference table to find the right preset:</p>
 
     <div class="exam-grid">
@@ -424,7 +424,7 @@
 
   <!-- How to use -->
   <div class="section">
-    <h2>How to Compress Photo for Government Form in 3 Steps</h2>
+    <h2>Cara Kompres Foto untuk Formulir Pemerintah dalam 3 Langkah</h2>
     <div class="steps">
       <div class="step">
         <div class="step-num">1</div>
@@ -452,14 +452,14 @@
 
   <!-- Tips -->
   <div class="section">
-    <h2>Important Tips for Government Form Photo Upload</h2>
+    <h2>Tips Penting untuk Unggah Foto Formulir Pemerintah</h2>
 
     <h3>Photo Specifications (Common Requirements)</h3>
     <p>Most Indian government exam portals share these common photo requirements. Make sure your photo meets all of them before compressing:</p>
     <table class="size-table">
       <thead><tr><th>Requirement</th><th>Standard Specification</th></tr></thead>
       <tbody>
-        <tr><td>Background</td><td>White or off-white, plain background</td></tr>
+        <tr><td>Latar Belakang</td><td>Putih or off-white, plain background</td></tr>
         <tr><td>Face coverage</td><td>Face should cover 70–80% of the frame</td></tr>
         <tr><td>Expression</td><td>Neutral expression, eyes open and looking at camera</td></tr>
         <tr><td>Glasses</td><td>Not allowed in most recent exam notifications</td></tr>
@@ -482,7 +482,7 @@
 
   <!-- FAQ -->
   <div class="section">
-    <h2>Frequently Asked Questions</h2>
+    <h2>Pertanyaan yang Sering Diajukan</h2>
     <div class="faq">
       <div class="faq-item">
         <div class="faq-q">What is the photo size for SSC CGL form?</div>
@@ -521,7 +521,7 @@
 
   <!-- Related tools -->
   <div class="section">
-    <h2>Tools by Target Size</h2>
+    <h2>Tools by Target Ukuran</h2>
     <p>Select the tool that matches your exam's photo size requirement:</p>
     <div class="tools-nav">
       <a class="tool-link" href="/id/compress-image-to-20kb/"><span class="tl-icon">📋</span><span>20 KB</span><span class="tl-sub">NDA, strict forms</span></a>
@@ -544,8 +544,8 @@
     <a href="/id/compress-image-to-500kb/">500KB</a>
     <a href="/id/compress-image-to-1mb/">1MB</a>
     <a href="/id/compress-image-for-passport/">Passport</a>
-    <a href="/id/changelog/">Changelog</a>
-    <a href="/id/privacy/">Privacy Policy</a>
+    <a href="/id/changelog/">Catatan Perubahan</a>
+    <a href="/id/privacy/">Privasi Policy</a>
   </div>
   <div style="margin-bottom:8px;font-size:12px;">
     <a href="https://backlinkdirs.com" style="color:var(--gray-500);text-decoration:none;" target="_blank">Backlink Dirs</a>
@@ -599,10 +599,10 @@ function handleFiles(files) {
   limited.forEach((file, i) => { const itemId = 'item-' + i; addResultItem(itemId, file.name, file.size); compressImage(file, targetKb * 1024, itemId, i); });
 }
 
-function addResultItem(id, name, originalSize) {
+function addResultItem(id, name, originalUkuran) {
   const div = document.createElement('div');
   div.className = 'result-item'; div.id = id;
-  div.innerHTML = `<img class="result-thumb" src="" alt="${escHtml(name)}" width="64" height="64" /><div class="result-info"><div class="result-name">${escHtml(name)}</div><div class="result-sizes">${formatSize(originalSize)}<span class="arrow">→</span><span class="new-size" id="${id}-newsize">Compressing…</span></div><div class="progress-bar-wrap"><div class="progress-bar" id="${id}-bar" style="width:30%"></div></div></div><a class="btn-dl" id="${id}-dl" disabled>⬇ Download</a>`;
+  div.innerHTML = `<img class="result-thumb" src="" alt="${escHtml(name)}" width="64" height="64" /><div class="result-info"><div class="result-name">${escHtml(name)}</div><div class="result-sizes">${formatUkuran(originalUkuran)}<span class="arrow">→</span><span class="new-size" id="${id}-newsize">Compressing…</span></div><div class="progress-bar-wrap"><div class="progress-bar" id="${id}-bar" style="width:30%"></div></div></div><a class="btn-dl" id="${id}-dl" disabled>⬇ Download</a>`;
   document.getElementById('results').appendChild(div);
 }
 
@@ -627,21 +627,21 @@ async function compressImage(file, targetBytes, itemId, index) {
   finishItem(itemId, index, outName, bestBlob, file.size, bestBlob.size);
 }
 
-function finishItem(itemId, index, name, blob, originalSize, newSize) {
+function finishItem(itemId, index, name, blob, originalUkuran, newUkuran) {
   const bar = document.getElementById(`${itemId}-bar`);
   bar.style.width = '100%'; bar.style.background = '#16a34a';
-  const newSizeEl = document.getElementById(`${itemId}-newsize`);
-  newSizeEl.textContent = formatSize(newSize);
-  if (newSize > originalSize * 0.95) newSizeEl.classList.add('warn');
+  const newUkuranEl = document.getElementById(`${itemId}-newsize`);
+  newUkuranEl.textContent = formatUkuran(newUkuran);
+  if (newUkuran > originalUkuran * 0.95) newUkuranEl.classList.add('warn');
   const url = URL.createObjectURL(blob);
   const dlBtn = document.getElementById(`${itemId}-dl`);
   dlBtn.href = url; dlBtn.download = name; dlBtn.removeAttribute('disabled');
-  compressedFiles[index] = { name, blob, originalSize, newSize };
+  compressedFiles[index] = { name, blob, originalUkuran, newUkuran };
   const allDone = compressedFiles.filter(Boolean).length;
-  if (allDone >= document.querySelectorAll('.result-item').length) showActionsRow();
+  if (allDone >= document.querySelectorAll('.result-item').length) showTindakansRow();
 }
 
-function showActionsRow() {
+function showTindakansRow() {
   const row = document.getElementById('actionsRow');
   row.style.display = 'flex';
   row.innerHTML = `<button class="btn-dl-all" onclick="downloadAll()">⬇ Download All</button><button class="btn-reset" onclick="resetTool()">↺ Compress More</button>`;
@@ -672,7 +672,7 @@ function canvasToBlob(canvas, quality) {
   return new Promise(resolve => canvas.toBlob(resolve, 'image/jpeg', quality));
 }
 
-function formatSize(bytes) {
+function formatUkuran(bytes) {
   if (bytes < 1024) return bytes + ' B';
   if (bytes < 1024 * 1024) return (bytes / 1024).toFixed(1) + ' KB';
   return (bytes / (1024 * 1024)).toFixed(2) + ' MB';

@@ -156,6 +156,26 @@
     footer { background: #fff; border-top: 1px solid var(--gray-200); padding: 28px 24px; text-align: center; font-size: 13px; color: var(--gray-500); }
     footer a { color: var(--gray-500); text-decoration: none; margin: 0 8px; }
     footer a:hover { color: var(--primary); }
+
+  /* RTL overrides for Arabic */
+  [dir="rtl"] body { direction: rtl; }
+  [dir="rtl"] .section h2,
+  [dir="rtl"] .section h3,
+  [dir="rtl"] .section p,
+  [dir="rtl"] .hero h1,
+  [dir="rtl"] .hero p { text-align: right; }
+  [dir="rtl"] .size-table th { text-align: right; }
+  [dir="rtl"] .size-table td { text-align: right; }
+  [dir="rtl"] .faq-q { flex-direction: row-reverse; }
+  [dir="rtl"] .faq-q::after { margin-left: 0; margin-right: 12px; }
+  [dir="rtl"] .step { flex-direction: row-reverse; }
+  [dir="rtl"] .step-body { text-align: right; }
+  [dir="rtl"] nav { flex-direction: row-reverse; }
+  [dir="rtl"] .result-item { flex-direction: row-reverse; }
+  [dir="rtl"] .result-info { text-align: right; }
+  [dir="rtl"] ol { padding-right: 20px; padding-left: 0; }
+  [dir="rtl"] .size-row { flex-direction: row-reverse; justify-content: flex-end; }
+  [dir="rtl"] .badges { flex-direction: row-reverse; }
   </style>
   <link rel="alternate" hreflang="en" href="https://compressto200kb.com/compress-image-for-whatsapp/" />
   <link rel="alternate" hreflang="zh-CN" href="https://compressto200kb.com/zh/compress-image-for-whatsapp/" />
@@ -186,7 +206,7 @@
 
 <div class="hero">
   <h1>ضغط صور <span>واتساب</span></h1>
-  <p>Reduce photo size for faster WhatsApp sharing. Compress to 200KB or any target size — instantly, in your browser. No upload, 100% private.</p>
+  <p>قم بتقليل حجم الصورة لمشاركة أسرع على WhatsApp. اضغط إلى 200 كيلو بايت أو أي حجم مستهدف — على الفور، في متصفحك. لا يوجد تحميل، 100٪ خاص.</p>
   <div class="badges">
     <span class="badge">✓ Free Forever</span>
     <span class="badge">✓ بدون رفع للخادم</span>
@@ -212,8 +232,8 @@
   </div>
   <div class="dropzone" id="dropzone">
     <div class="dropzone-icon">🖼️</div>
-    <h3>Drop your images here</h3>
-    <p>Supports JPG, PNG, WEBP · Up to 20 images at once</p>
+    <h3>أسقط صورك هنا</h3>
+    <p>يدعم JPG، PNG، WEBP · ما يصل إلى 20 صورة في وقت واحد</p>
     <button class="btn-select" onclick="document.getElementById('fileInput').click()">
       📁 Select Images
     </button>
@@ -226,26 +246,26 @@
 <div class="content-wrap">
 
   <div class="section">
-    <h2>How to Compress an Image for WhatsApp</h2>
+    <h2>كيفية ضغط صورة للواتس اب</h2>
     <div class="steps">
       <div class="step">
         <div class="step-num">1</div>
         <div class="step-body">
-          <h4>Choose your target size (200KB recommended)</h4>
-          <p>200KB is the sweet spot for WhatsApp — small enough for fast sharing, large enough to maintain good visual quality. You can also choose 100KB for even faster delivery.</p>
+          <h4>اختر الحجم المستهدف (يوصى بـ 200 كيلو بايت)</h4>
+          <p>200 كيلو بايت هي المساحة المثالية لتطبيق WhatsApp، فهي صغيرة بما يكفي للمشاركة السريعة، وكبيرة بما يكفي للحفاظ على جودة مرئية جيدة. يمكنك أيضًا اختيار 100 كيلو بايت للتسليم بشكل أسرع.</p>
         </div>
       </div>
       <div class="step">
         <div class="step-num">2</div>
         <div class="step-body">
-          <h4>Upload your image</h4>
+          <h4>قم بتحميل صورتك</h4>
           <p>Click <strong>Select Images</strong> or drag and drop your JPG, PNG or WEBP file. Compression starts automatically — no waiting, no server upload.</p>
         </div>
       </div>
       <div class="step">
         <div class="step-num">3</div>
         <div class="step-body">
-          <h4>Download the compressed file</h4>
+          <h4>قم بتنزيل الملف المضغوط</h4>
           <p>Your compressed image appears instantly with a before/after size comparison. Click <strong>Download</strong> to save it.</p>
         </div>
       </div>
@@ -253,29 +273,29 @@
   </div>
 
   <div class="section">
-    <h2>About This Tool</h2>
-    <p>WhatsApp automatically compresses images when you send them, but this automatic compression can significantly reduce quality. By pre-compressing your images to 200KB before sending, you control the quality and ensure your photos look their best.</p>
-    <h3>Why Pre-Compress Images for WhatsApp?</h3>
-    <p>When WhatsApp compresses images automatically, it uses aggressive compression that can make photos look blurry or pixelated. By compressing to 200KB yourself using our tool, you use a smarter binary search algorithm that finds the optimal quality level — resulting in better-looking images than WhatsApp's automatic compression.</p>
-    <h3>Best Size for WhatsApp Images</h3>
-    <p>For WhatsApp sharing, we recommend 200KB as the target size. This provides a good balance between image quality and file size. For profile pictures, 100KB is sufficient. For high-quality photos you want to preserve, use 500KB.</p>
-    <h3>Works for Telegram, Signal, and Other Messaging Apps</h3>
-    <p>This tool works for any messaging app that benefits from smaller image sizes, including Telegram, Signal, iMessage, WeChat, and Line. The same 200KB target works well for all of them.</p>
+    <h2>حول هذه الأداة</h2>
+    <p>يقوم WhatsApp تلقائيًا بضغط الصور عند إرسالها، لكن هذا الضغط التلقائي يمكن أن يقلل الجودة بشكل كبير. من خلال ضغط صورك مسبقًا إلى 200 كيلو بايت قبل إرسالها، يمكنك التحكم في الجودة والتأكد من أن صورك تبدو في أفضل حالاتها.</p>
+    <h3>لماذا يتم ضغط الصور مسبقًا لتطبيق WhatsApp؟</h3>
+    <p>عندما يقوم WhatsApp بضغط الصور تلقائيًا، فإنه يستخدم ضغطًا قويًا يمكن أن يجعل الصور تبدو ضبابية أو منقطة. من خلال الضغط إلى 200 كيلو بايت بنفسك باستخدام أداتنا، فإنك تستخدم خوارزمية بحث ثنائية أكثر ذكاءً تجد مستوى الجودة الأمثل - مما يؤدي إلى الحصول على صور ذات مظهر أفضل من الضغط التلقائي في WhatsApp.</p>
+    <h3>أفضل حجم لصور ال WhatsApp</h3>
+    <p>بالنسبة للمشاركة عبر WhatsApp، نوصي بأن يكون الحجم المستهدف هو 200 كيلو بايت. وهذا يوفر توازنًا جيدًا بين جودة الصورة وحجم الملف. بالنسبة لصور الملف الشخصي، 100 كيلو بايت كافية. للحصول على صور عالية الجودة تريد الاحتفاظ بها، استخدم 500 كيلو بايت.</p>
+    <h3>يعمل مع Telegram وSignal وتطبيقات المراسلة الأخرى</h3>
+    <p>تعمل هذه الأداة مع أي تطبيق مراسلة يستفيد من أحجام الصور الأصغر، بما في ذلك Telegram وSignal وiMessage وWeChat وLine. نفس الهدف البالغ 200 كيلو بايت يعمل جيدًا للجميع.</p>
   </div>
 
   <div class="section">
-    <h2>Frequently Asked Questions</h2>
+    <h2>الأسئلة المتداولة</h2>
     <div class="faq">
-      <div class="faq-item"><div class="faq-q">What is the best image size for WhatsApp?</div><div class="faq-a">For WhatsApp sharing, 200KB is a good target — it provides excellent visual quality while keeping file sizes small for fast delivery. For profile pictures, 100KB is sufficient. WhatsApp itself compresses images to around 100-200KB when you send them.</div></div>
-      <div class="faq-item"><div class="faq-q">Why should I compress images before sending on WhatsApp?</div><div class="faq-a">WhatsApp's automatic compression can make photos look blurry. By pre-compressing with our tool, you use a smarter algorithm that finds the optimal quality level, resulting in better-looking images than WhatsApp's automatic compression.</div></div>
-      <div class="faq-item"><div class="faq-q">Does this work for Telegram and other messaging apps?</div><div class="faq-a">Yes! This tool works for any messaging app. The 200KB target is suitable for WhatsApp, Telegram, Signal, iMessage, WeChat, and Line.</div></div>
-      <div class="faq-item"><div class="faq-q">Is my photo uploaded to a server?</div><div class="faq-a">No. All compression happens entirely inside your web browser. Your photos are never sent to any server, never stored, and never seen by anyone other than you.</div></div>
+      <div class="faq-item"><div class="faq-q">ما هو أفضل حجم للصورة لتطبيق WhatsApp؟</div><div class="faq-a">بالنسبة لمشاركة WhatsApp، يعد 200 كيلو بايت هدفًا جيدًا - فهو يوفر جودة مرئية ممتازة مع الحفاظ على أحجام الملفات صغيرة للتسليم السريع. بالنسبة لصور الملف الشخصي، 100 كيلو بايت كافية. يقوم WhatsApp نفسه بضغط الصور إلى حوالي 100-200 كيلو بايت عند إرسالها.</div></div>
+      <div class="faq-item"><div class="faq-q">لماذا يجب علي ضغط الصور قبل إرسالها على الواتس اب؟</div><div class="faq-a">يمكن أن يؤدي الضغط التلقائي لتطبيق WhatsApp إلى جعل الصور تبدو ضبابية. من خلال الضغط المسبق باستخدام أداتنا، فإنك تستخدم خوارزمية أكثر ذكاءً تجد مستوى الجودة الأمثل، مما يؤدي إلى الحصول على صور ذات مظهر أفضل من الضغط التلقائي في WhatsApp.</div></div>
+      <div class="faq-item"><div class="faq-q">هل يعمل هذا مع Telegram وتطبيقات المراسلة الأخرى؟</div><div class="faq-a">نعم! تعمل هذه الأداة مع أي تطبيق مراسلة. الهدف 200 كيلو بايت مناسب لـ WhatsApp وTelegram وSignal وiMessage وWeChat وLine.</div></div>
+      <div class="faq-item"><div class="faq-q">هل تم تحميل صورتي على الخادم؟</div><div class="faq-a">لا، كل عمليات الضغط تتم بالكامل داخل متصفح الويب الخاص بك. لا يتم إرسال صورك أبدًا إلى أي خادم، ولا يتم تخزينها أبدًا، ولا يراها أي شخص آخر غيرك.</div></div>
     </div>
   </div>
 
   <div class="section">
-    <h2>Other Target Sizes</h2>
-    <p>Need a different file size? Choose from our dedicated tools:</p>
+    <h2>أحجام الأهداف الأخرى</h2>
+    <p>هل تحتاج إلى حجم ملف مختلف؟ اختر من أدواتنا المخصصة:</p>
     <div class="tools-nav">
       <a class="tool-link" href="/ar/compress-image-to-20kb/"><span class="tl-icon">📋</span><span>20 KB</span><span class="tl-sub">Gov forms</span></a>
       <a class="tool-link" href="/ar/compress-image-to-50kb/"><span class="tl-icon">🪪</span><span>50 KB</span><span class="tl-sub">Passport photos</span></a>
