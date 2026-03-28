@@ -45,37 +45,23 @@
     "@context": "https://schema.org",
     "@type": "WebApplication",
     "name": "Compress Image to 200KB",
-    "url": "https://compressto200kb.com",
+    "url": "https://compressto200kb.com/zh/",
     "description": "Free online tool to compress images to exactly 200KB or any target size. Works entirely in your browser — no upload required.",
     "applicationCategory": "UtilitiesApplication",
     "operatingSystem": "Any",
     "browserRequirements": "Requires a modern browser with HTML5 Canvas API support",
     "featureList": "Compress JPG to 200KB, Compress PNG to 200KB, Compress WEBP to 200KB, Batch image compression, No server upload, Free image compressor",
-    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "4.8",
-      "ratingCount": "2341",
-      "bestRating": "5",
-      "worstRating": "1"
-    }
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
   }
   </script>
-  <!-- Structured Data: SiteLinksSearchBox -->
+  <!-- Structured Data: WebSite -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "WebSite",
     "url": "https://compressto200kb.com/",
     "name": "CompressTo200KB",
-    "potentialAction": {
-      "@type": "SearchAction",
-      "target": {
-        "@type": "EntryPoint",
-        "urlTemplate": "https://compressto200kb.com/?q={search_term_string}"
-      },
-      "query-input": "required name=search_term_string"
-    }
+    "description": "Free online image compressor. Compress JPG, PNG, WEBP to any target size. No upload required."
   }
   </script>
   <!-- Structured Data: FAQPage -->
@@ -86,66 +72,42 @@
     "mainEntity": [
       {
         "@type": "Question",
-        "name": "Does compressing to 200KB reduce image quality?",
+        "name": "压缩到200KB会降低图片质量吗？",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Yes, some quality reduction is inevitable when compressing to a specific file size. However, our binary-search algorithm finds the highest possible quality that still meets your 200KB target, so quality loss is minimized. For most use cases like form uploads and profile pictures, the result is visually excellent."
+          "text": "会有一定程度的质量损失，但我们的二分搜索算法会找到满足200KB目标的最高质量，质量损失降到最低。对于表单上传、证件照等常见用途，压缩效果非常好。"
         }
       },
       {
         "@type": "Question",
-        "name": "Is my image uploaded to a server?",
+        "name": "我的图片会上传到服务器吗？",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "No. All processing happens entirely inside your web browser using the HTML5 Canvas API. Your images are never sent to any server, never stored anywhere, and never seen by anyone other than you. This makes the tool completely private and safe for sensitive documents like ID photos."
+          "text": "不会。所有处理完全在您的浏览器内通过HTML5 Canvas API完成。您的图片不会发送到任何服务器，不会被存储，也不会被任何人看到，完全私密安全。"
         }
       },
       {
         "@type": "Question",
-        "name": "Can I compress multiple images to 200KB at once?",
+        "name": "可以同时压缩多张图片吗？",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Yes! You can select up to 20 images at once. All of them will be compressed to 200KB simultaneously. You can then download them individually or use the Download All button to get all compressed images at once."
+          "text": "可以！您最多可以同时选择20张图片，全部压缩到200KB。可以单独下载，也可以点击\"全部下载\"一次性获取所有压缩后的图片。"
         }
       },
       {
         "@type": "Question",
-        "name": "What image formats are supported?",
+        "name": "支持哪些图片格式？",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "The tool supports JPG/JPEG, PNG, and WEBP input formats. All output files are saved as JPEG (.jpg), which provides the best compression ratio for photographs. If you upload a PNG with transparency, the transparent areas will be filled with white in the output."
+          "text": "支持JPG/JPEG、PNG和WEBP格式输入。所有输出文件保存为JPEG（.jpg），压缩比最佳。上传带透明度的PNG时，透明区域将填充为白色。"
         }
       },
       {
         "@type": "Question",
-        "name": "How do I compress an image to 200KB for WhatsApp?",
+        "name": "如何在iPhone和Android上压缩图片到200KB？",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Simply upload your image to this tool with the 200 KB preset selected (it's the default). The tool will compress your photo to under 200KB while keeping the best possible quality. The resulting JPEG file is perfect for sharing on WhatsApp, Telegram, or any messaging app."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Does this work on iPhone and Android?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes. The tool works on any modern browser including Safari on iPhone, Chrome on Android, and all desktop browsers. No app installation is required — just open the page and start compressing."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Why is the compressed file slightly larger than 200KB sometimes?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "JPEG encoding is not perfectly predictable — the same quality setting can produce slightly different file sizes depending on image content. Our algorithm targets a size at or below your limit, but due to the binary search stopping condition, the result may occasionally be 1–3% above the target. If this happens, try reducing the target by 10 KB (e.g., use 190 KB instead of 200 KB)."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What if I need to compress to a size other than 200KB?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Use the preset buttons (20 KB, 50 KB, 100 KB, 500 KB, 1 MB) or type any custom value in the KB field. The tool works for any target size from 1 KB to 10 MB."
+          "text": "在手机浏览器中打开本工具即可，无需安装任何应用。点击\"选择图片\"按钮，从相册选择图片，压缩完成后点击下载即可。"
         }
       }
     ]
@@ -157,7 +119,7 @@
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://compressto200kb.com/" }
+      { "@type": "ListItem", "position": 1, "name": "首页", "item": "https://compressto200kb.com/zh/" }
     ]
   }
   </script>
